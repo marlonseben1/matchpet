@@ -1,0 +1,22 @@
+{
+  "name": "matchpet",
+  "version": "1.0.0",
+  "description": "Landing page for a fictional adoption site",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass sass/main.scss css/style.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marlonseben1/matchpet.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marlonseben1/matchpet/issues"
+  },
+  "homepage": "https://github.com/marlonseben1/matchpet#readme",
+  "devDependencies": {
+    "sass": "^1.89.2"
+  }
+}
