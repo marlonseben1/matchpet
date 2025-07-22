@@ -4,29 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Matchpet</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/x-icon" href="/img/icon_favicon.svg" />
   </head>
   <body>
     <header class="header">
-      <!-- Nav section -->
-      <nav>
-        <img src="img/icon_logo.svg" alt="Matchpet logo" class="logo" />
-        <ul>
-          <li class="nav__item--desktop">
-            <a href="#" class="nav__link--desktop">Nossos pets</a>
+      <img src="/img/icon_logo.svg" class="header__logo" />
+      <label for="checkbox" class="menu">
+        <input type="checkbox" id="checkbox" hidden />
+        <div class="line line-1"></div>
+        <div class="line line-2"></div>
+        <div class="line line-3"></div>
+      </label>
+      <nav class="navigation hidden is-active">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">Nossos pets</a>
           </li>
-          <li class="nav__item--desktop">
-            <a href="#" class="nav__link--desktop">Quem somos</a>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">Quem somos</a>
           </li>
-          <li class="nav__item--desktop">
-            <a href="#" class="nav__link--desktop">Contato</a>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">Contato</a>
           </li>
-          <li class="nav__item--desktop">
-            <a href="#" class="nav__link--desktop">Suporte</a>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">Suporte</a>
           </li>
         </ul>
-        <a href="#" class="btn btn--white">Entrar</a>
-        <img src="img/icon_menu.svg" alt="Menu icon" class="menu" />
+        <button class="navigation__btn btn">Entrar</button>
       </nav>
     </header>
+    <script src="/js/scripts.js"></script>
   </body>
 </html>
