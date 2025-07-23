@@ -1,20 +1,18 @@
 // FONT IMPORT
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
 
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
-}
-
 html {
   // This defines what 1rem is
   font-size: 62.5%;
 }
 
 body {
+  box-sizing: border-box;
+  font-family: "Quicksand";
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 1.5;
+  color: $color-gray-700;
   box-sizing: border-box;
 }
 

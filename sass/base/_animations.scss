@@ -1,0 +1,47 @@
+@keyframes moveInTop {
+  0% {
+    opacity: 0; /* Starts invisible */
+    transform: translateY(-100px); /* Starts at the top and begins falling */
+  }
+
+  100% {
+    opacity: 1; /* Fully visible */
+    transform: translate(0); /* Final position */
+  }
+}
+
+@keyframes moveOutBottom {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+}
+
+@keyframes moveInLeftToRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveOutRightToLeft {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+}
