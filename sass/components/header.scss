@@ -7,9 +7,33 @@
   padding: 1.6rem 2.4rem;
   position: relative;
 
+  &__right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   &__logo {
     width: 12.7rem;
     height: 3.4rem;
+  }
+}
+
+@media (min-width: $breakpoint-desktop) {
+  .header {
+    height: 9.6rem;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__left {
+      width: 25%;
+    }
+
+    &__right {
+      width: 50%;
+    }
   }
 }
 

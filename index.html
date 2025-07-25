@@ -9,7 +9,9 @@
   </head>
   <body>
     <header class="header">
-      <img src="/img/icon_logo.svg" class="header__logo" />
+      <div class="header__left">
+        <img src="/img/icon_logo.svg" class="header__logo" />
+      </div>
       <label for="checkbox" class="menu">
         <input type="checkbox" id="checkbox" hidden />
         <div class="line line-1"></div>
@@ -31,8 +33,10 @@
             <a href="#" class="navigation__link">Suporte</a>
           </li>
         </ul>
-        <button class="navigation__btn btn">Entrar</button>
-      </nav>
+        <div class="header__right">
+          <button class="navigation__btn btn">Entrar</button>
+        </nav>
+        </div>
     </header>
     <script src="/js/scripts.js"></script>
   </body>

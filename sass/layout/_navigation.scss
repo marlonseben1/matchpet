@@ -63,7 +63,44 @@
 }
 
 a {
-  display: block;
+  display: inline-block;
   color: inherit;
   text-decoration: none;
+}
+
+// PC MEDIA QUERRY
+
+@media (min-width: $breakpoint-desktop) {
+  .menu {
+    display: none;
+  }
+
+  .navigation {
+    position: static;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    width: 75%;
+    flex-direction: row;
+    pointer-events: all;
+
+    &__list {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 70%;
+    }
+
+    &__item {
+      border: 0;
+      width: auto;
+    }
+
+    &__btn {
+      width: auto;
+    }
+  }
 }

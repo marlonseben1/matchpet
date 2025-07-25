@@ -4,18 +4,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
   checkbox.addEventListener("change", () => {
     if (checkbox.checked) {
-      // Remove a animação de saída e aplica a de entrada
       navigation.classList.remove("navigation--close");
       navigation.classList.add("navigation--open");
     } else {
-      // Remove a animação de entrada e aplica a de saída
       navigation.classList.remove("navigation--open");
       navigation.classList.add("navigation--close");
 
-      // Após a animação de saída, desativa pointer-events
       setTimeout(() => {
         navigation.classList.remove("navigation--close");
-      }, 450); // Duração da animação
+      }, 450);
     }
   });
 });
+
+function handleResize() {
+  const navigation = document.querySelector(".navigation");
+  const isDesktop = window.innerWidth >= 1024;
+
+  if (isDesktop) {
+    navigation.classList.remove("navigation--open", "navigation--close");
+  }
+}
+
+window.addEventListener("resize", handleResize);
+
+window.addEventListener("DOMContentLoaded", handleResize);
