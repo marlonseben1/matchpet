@@ -85,6 +85,8 @@ a {
     width: 75%;
     flex-direction: row;
     pointer-events: all;
+    font-size: $font-desktop-body-20;
+    font-weight: 400;
 
     &__list {
       display: flex;
@@ -97,10 +99,41 @@ a {
     &__item {
       border: 0;
       width: auto;
+      padding: 2rem 1rem;
     }
 
     &__btn {
       width: auto;
+    }
+
+    &__link {
+      position: relative;
+    }
+
+    &__link:hover {
+      transform: scale(1.1); // Scales the text
+      transition: all 0.25s;
+    }
+
+    &__link::after {
+      content: "";
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+      border-radius: 100rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      transition: all 0.3s;
+      background-color: $color-gray-100;
+      opacity: 0;
+      transform: scale(0);
+    }
+
+    &__link:hover::after {
+      opacity: 1;
+      transform: scale(1.2); // Scales the gray background created with ::after
     }
   }
 }
