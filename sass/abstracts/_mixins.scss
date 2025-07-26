@@ -8,10 +8,10 @@
   font-weight: 500;
 }
 
-@mixin defaultBtnWhiteBackground {
+@mixin defaultBtnTransparentBackground {
   text-align: center;
   color: $color-primary-brand;
-  background-color: $color-white;
+  background-color: transparent;
   border-radius: 0.8rem;
   border: 1px solid $color-primary-brand;
   cursor: pointer;

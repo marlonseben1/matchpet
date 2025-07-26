@@ -16,6 +16,7 @@
       $color-primary-brand,
       $color-white
     );
+    position: relative;
 
     &__circle--orange {
       position: relative;
@@ -33,6 +34,15 @@
       z-index: 1000;
       position: absolute;
     }
+  }
+
+  &__buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    margin-top: 1.6rem;
   }
 
   &__text-and-buttons {
@@ -68,6 +78,11 @@
       margin-top: 2.4rem;
       font-size: $font-mobile-body-16;
       @include defaultBtnPrimaryColorBackground;
+      transition: all 0.4s ease-in;
+    }
+
+    &__adoption-btn:hover {
+      background-color: darken($color-primary-brand, 10%);
     }
 
     &__donation-btn {
@@ -76,7 +91,98 @@
       height: 5.4rem;
       margin-top: 1.6rem;
       font-size: $font-mobile-body-16;
-      @include defaultBtnWhiteBackground;
+      @include defaultBtnTransparentBackground;
+      transition: all 0.4s ease-in;
     }
+
+    &__donation-btn:hover {
+      background-color: darken($color-primary-brand, 10%);
+      color: $color-white;
+    }
+  }
+}
+
+// PC MEDIA QUERRY
+
+@media (min-width: $breakpoint-desktop) {
+  .homepage {
+    height: 63.1rem;
+    flex-direction: row;
+    background-image: linear-gradient(
+      to left,
+      lighten($color-primary-brand, 10%),
+      $color-white
+    );
+    overflow: hidden;
+    padding-left: 21.6rem;
+    padding-right: 8.2rem;
+
+    &__picture {
+      background-image: none;
+      order: 1;
+      height: 100%;
+      width: 56.9rem;
+
+      &__circle--orange {
+        width: 55.6rem;
+        height: 55.6rem;
+        top: 12rem;
+      }
+
+      &__dog {
+        width: 45.5rem;
+        height: 56.9rem;
+        top: 9rem;
+      }
+    }
+
+    &__buttons {
+      flex-direction: row;
+      max-width: 54rem;
+      gap: 3rem;
+    }
+
+    &__text-and-buttons {
+      order: 0;
+      margin-right: 2.4rem;
+      max-width: 60.2rem;
+
+      &__heart-pawn {
+        width: 2.4rem;
+        height: 2.4rem;
+      }
+
+      &__main-title {
+        font-size: $font-desktop-title-h2;
+        max-width: 60.4rem;
+      }
+
+      &__sub-title {
+        font-size: $font-desktop-body-24;
+        max-width: 41.9rem;
+      }
+
+      &__adoption-btn {
+        display: inline-block;
+        width: 24.5rem;
+        height: 6rem;
+        margin-top: 0;
+        font-size: $font-desktop-body-24;
+      }
+
+      &__donation-btn {
+        display: inline-block;
+        width: 24.5rem;
+        height: 6rem;
+        margin-top: 0;
+        font-size: $font-desktop-body-24;
+      }
+    }
+  }
+}
+
+@media (min-width: $breakpoint-big-desktop) {
+  .homepage {
+    gap: 10rem;
   }
 }
