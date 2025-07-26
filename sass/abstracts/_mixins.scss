@@ -1,0 +1,19 @@
+@mixin defaultBtnPrimaryColorBackground {
+  text-align: center;
+  color: $color-white;
+  background-color: $color-primary-brand;
+  border-radius: 0.8rem;
+  border: none;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+@mixin defaultBtnWhiteBackground {
+  text-align: center;
+  color: $color-primary-brand;
+  background-color: $color-white;
+  border-radius: 0.8rem;
+  border: 1px solid $color-primary-brand;
+  cursor: pointer;
+  font-weight: 800;
+}
