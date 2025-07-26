@@ -76,3 +76,9 @@
     translate: 0 -0.8rem;
   }
 }
+
+@media (min-width: $breakpoint-desktop) {
+  .menu {
+    display: none;
+  }
+}

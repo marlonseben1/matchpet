@@ -71,14 +71,10 @@ a {
 // PC MEDIA QUERRY
 
 @media (min-width: $breakpoint-desktop) {
-  .menu {
-    display: none;
-  }
-
   .navigation {
     position: static;
-    flex: 1;
     display: flex;
+    flex: 1;
     justify-content: center;
     align-items: center;
     opacity: 1;
@@ -89,7 +85,6 @@ a {
     font-weight: 400;
 
     &__list {
-      display: flex;
       flex-direction: row;
       justify-content: space-evenly;
       align-items: center;
