@@ -56,7 +56,7 @@
 }
 .homepage__text-and-buttons__sub-title {
   margin-top: 1.6rem;
-  width: 80%;
+  width: 87%;
   font-size: 2rem;
   font-weight: 300;
 }
@@ -65,26 +65,28 @@
   width: 100%;
   height: 5.4rem;
   margin-top: 2.4rem;
+  font-size: 2rem;
   text-align: center;
   color: #fff;
   background-color: #ff816b;
   border-radius: 0.8rem;
   border: none;
   cursor: pointer;
-  font-weight: 800;
+  font-weight: 500;
 }
 .homepage__text-and-buttons__donation-btn {
   display: inline-block;
   width: 100%;
   height: 5.4rem;
   margin-top: 1.6rem;
+  font-size: 2rem;
   text-align: center;
   color: #ff816b;
   background-color: #fff;
   border-radius: 0.8rem;
   border: 1px solid #ff816b;
   cursor: pointer;
-  font-weight: 800;
+  font-weight: 500;
 }
 
 html {
