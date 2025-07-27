@@ -26,4 +26,16 @@
     text-align: center;
     font-weight: $font-weight-regular;
   }
+
+  &__adoption-link {
+    margin-top: 3.6rem;
+    color: $color-secondary-dark;
+    font-size: $font-mobile-body-10;
+    font-weight: $font-weight-bold;
+    text-decoration: underline;
+
+    &--link {
+      text-decoration: underline;
+    }
+  }
 }

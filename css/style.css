@@ -20,6 +20,7 @@ body {
   color: #312845;
   box-sizing: border-box;
   margin-bottom: 200rem;
+  scroll-behavior: smooth;
 }
 
 .hidden {
@@ -379,6 +380,114 @@ a {
   color: #756f82;
   text-align: center;
   font-weight: 400;
+}
+.featured-pets__adoption-link {
+  margin-top: 3.6rem;
+  color: #2e1559;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.featured-pets__adoption-link--link {
+  text-decoration: underline;
+}
+
+.card {
+  margin-top: 3.8rem;
+  list-style: none;
+  width: 21rem;
+  height: 29.3rem;
+  border-radius: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  border: 0.5px solid #b1adba;
+  overflow: hidden;
+}
+.card__naming {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0.8rem;
+}
+.card__naming--name {
+  width: 16rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #000;
+}
+.card__naming--icon {
+  cursor: pointer;
+}
+.card__description {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 1rem 0.8rem;
+  gap: 1rem;
+}
+.card__description__age-gender-size {
+  display: flex;
+  flex-direction: row;
+  gap: 3.5rem;
+}
+.card__description--icon-pet {
+  width: 2rem;
+  height: 2rem;
+}
+.card__description--age {
+  font-size: 1.4rem;
+  color: #756f82;
+  font-weight: 400;
+}
+.card__description--gender {
+  font-size: 1.4rem;
+  color: #756f82;
+  font-weight: 400;
+}
+.card__description--size {
+  font-size: 1.4rem;
+  color: #756f82;
+  font-weight: 400;
+}
+.card__description__pin-location {
+  display: flex;
+  flex-direction: row;
+  width: 19.4rem;
+  gap: 0.8rem;
+}
+.card__description--icon-pin {
+  height: 1.9rem;
+  width: 1.9rem;
+}
+.card__description--location {
+  font-size: 1.4rem;
+  color: #756f82;
+  font-weight: 400;
+}
+.card__description--button {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 0;
+  border: none;
+  background-color: #2e1559;
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+.card__description--button:hover {
+  background-color: rgb(67.3272727273, 30.7363636364, 130.2636363636);
+}
+
+.carousel {
+  width: 100%;
+  display: flex;
+  align-items: row;
+  justify-content: center;
 }
 
 .header {
