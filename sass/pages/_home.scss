@@ -1,14 +1,10 @@
 .homepage {
+  @include flex-align-justify-center;
   width: 100%;
-  display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
 
   &__picture {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex-align-justify-center;
     width: 100%;
     height: 19.5rem;
     background-image: linear-gradient(
@@ -37,20 +33,18 @@
   }
 
   &__buttons {
+    @include flex-column;
     width: 100%;
-    display: flex;
-    flex-direction: column;
     justify-content: space-between;
     align-items: start;
     margin-top: 1.6rem;
   }
 
   &__text-and-buttons {
+    @include flex-column;
+    align-items: start;
     width: 100%;
     padding: 0 2.4rem;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
 
     &__heart-pawn {
       width: 1.8rem;

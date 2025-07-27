@@ -73,6 +73,8 @@ body.no-scroll {
   }
 }
 .navigation {
+  display: flex;
+  flex-direction: column;
   position: absolute;
   font-weight: 300;
   color: #2e1559;
@@ -87,17 +89,15 @@ body.no-scroll {
   opacity: 0;
   font-size: 2rem;
   pointer-events: none;
-  display: flex;
-  flex-direction: column;
 }
 .navigation__list {
+  display: flex;
+  flex-direction: column;
   list-style: none;
   padding: 0;
   margin: 0;
   width: 100%;
   height: auto;
-  display: flex;
-  flex-direction: column;
 }
 .navigation__item {
   padding: 4.4rem 7%;
@@ -140,11 +140,11 @@ a {
 
 @media (min-width: 1024px) {
   .navigation {
-    position: static;
     display: flex;
-    flex: 1;
     justify-content: center;
     align-items: center;
+    position: static;
+    flex: 1;
     opacity: 1;
     width: 75%;
     flex-direction: row;
@@ -194,16 +194,16 @@ a {
   }
 }
 .homepage {
-  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
 }
 .homepage__picture {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   width: 100%;
   height: 19.5rem;
   background-image: linear-gradient(to left, #ff816b, #fff);
@@ -225,19 +225,19 @@ a {
   position: absolute;
 }
 .homepage__buttons {
-  width: 100%;
   display: flex;
   flex-direction: column;
+  width: 100%;
   justify-content: space-between;
   align-items: start;
   margin-top: 1.6rem;
 }
 .homepage__text-and-buttons {
-  width: 100%;
-  padding: 0 2.4rem;
   display: flex;
   flex-direction: column;
   align-items: start;
+  width: 100%;
+  padding: 0 2.4rem;
 }
 .homepage__text-and-buttons__heart-pawn {
   width: 1.8rem;
@@ -362,9 +362,9 @@ a {
 }
 .featured-pets {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   margin-top: 8.4rem;
 }
 .featured-pets__slogan {
@@ -398,13 +398,13 @@ a {
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
   margin-top: 3.8rem;
   list-style: none;
   width: 21rem;
   height: 29.3rem;
   border-radius: 0.8rem;
-  display: flex;
-  flex-direction: column;
   border-radius: 8px;
   border: 0.5px solid #b1adba;
   overflow: hidden;
@@ -427,8 +427,8 @@ a {
 }
 .card__description {
   display: flex;
-  align-items: center;
   flex-direction: row;
+  align-items: center;
   flex-wrap: wrap;
   padding: 1rem 0.8rem;
   gap: 1rem;
@@ -511,8 +511,8 @@ a {
 }
 .header__right {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 .header__logo {
   width: 16.7rem;
@@ -521,11 +521,11 @@ a {
 
 @media (min-width: 1024px) {
   .header {
+    display: flex;
+    align-items: center;
     height: 9.6rem;
     text-align: center;
-    display: flex;
     justify-content: space-between;
-    align-items: center;
     overflow: hidden;
   }
   .header__left {
@@ -536,14 +536,14 @@ a {
   }
 }
 .menu {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   width: 4rem;
   height: 6rem;
   background-color: #fff;
   border-radius: 1rem;
   padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   cursor: pointer;
 }
 .menu .line {

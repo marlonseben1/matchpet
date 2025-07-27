@@ -1,6 +1,5 @@
 .header {
-  display: flex;
-  align-items: center;
+  @include flex-align-center;
   justify-content: space-between;
   height: 6.3rem;
   width: 100%;
@@ -13,9 +12,7 @@
   background-color: $color-white;
 
   &__right {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex-align-justify-center;
   }
 
   &__logo {
@@ -26,11 +23,10 @@
 
 @media (min-width: $breakpoint-desktop) {
   .header {
+    @include flex-align-center;
     height: 9.6rem;
     text-align: center;
-    display: flex;
     justify-content: space-between;
-    align-items: center;
     overflow: hidden;
 
     &__left {
@@ -45,14 +41,13 @@
 
 // Hamburguer menu
 .menu {
+  @include flex-justify-center;
+  flex-direction: column;
   width: 4rem;
   height: 6rem;
   background-color: $color-white;
   border-radius: 1rem;
   padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   cursor: pointer;
 
   .line {

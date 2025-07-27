@@ -1,8 +1,6 @@
 .featured-pets {
-  display: flex;
+  @include flex-align-justify-center;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   margin-top: 8.4rem;
 
   &__slogan {
