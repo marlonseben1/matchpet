@@ -5,7 +5,12 @@
   height: 6.3rem;
   width: 100%;
   padding: 1.6rem 2.4rem;
-  position: relative;
+  position: fixed;
+  z-index: 1001;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: $color-white;
 
   &__right {
     display: flex;
