@@ -1,0 +1,29 @@
+.featured-pets {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8.4rem;
+
+  &__slogan {
+    font-size: $font-mobile-body-12;
+    color: $color-primary-brand;
+    font-weight: $font-weight-regular;
+  }
+
+  &__title {
+    width: 32rem;
+    text-align: center;
+    font-weight: $font-weight-heavy;
+    font-size: $font-mobile-title-h3;
+  }
+
+  &__paragraph {
+    width: 32rem;
+    margin-top: 1.2rem;
+    font-size: $font-mobile-body-12;
+    color: $color-gray-500;
+    text-align: center;
+    font-weight: $font-weight-regular;
+  }
+}

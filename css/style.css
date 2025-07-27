@@ -19,6 +19,7 @@ body {
   line-height: 1.5;
   color: #312845;
   box-sizing: border-box;
+  margin-bottom: 200rem;
 }
 
 .hidden {
@@ -353,6 +354,33 @@ a {
     gap: 10rem;
   }
 }
+.featured-pets {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8.4rem;
+}
+.featured-pets__slogan {
+  font-size: 1.6rem;
+  color: #ff816b;
+  font-weight: 400;
+}
+.featured-pets__title {
+  width: 32rem;
+  text-align: center;
+  font-weight: 900;
+  font-size: 2.4rem;
+}
+.featured-pets__paragraph {
+  width: 32rem;
+  margin-top: 1.2rem;
+  font-size: 1.6rem;
+  color: #756f82;
+  text-align: center;
+  font-weight: 400;
+}
+
 .header {
   display: flex;
   align-items: center;

@@ -1,6 +1,6 @@
 .navigation {
   position: absolute;
-  font-weight: 300;
+  font-weight: $font-weight-light;
   color: $color-secondary-dark;
   top: 100%;
   left: 0;
@@ -82,7 +82,7 @@ a {
     flex-direction: row;
     pointer-events: all;
     font-size: $font-desktop-body-20;
-    font-weight: 400;
+    font-weight: $font-weight-regular;
 
     &__list {
       flex-direction: row;
