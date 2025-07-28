@@ -9,6 +9,8 @@
 
 html {
   font-size: 62.5%;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 body {
@@ -20,6 +22,7 @@ body {
   margin-bottom: 200rem;
   scroll-behavior: smooth;
   padding-top: 6.3rem;
+  overflow-x: hidden;
 }
 
 body.no-scroll {
@@ -387,6 +390,7 @@ a {
   font-weight: 400;
 }
 .featured-pets__adoption-link {
+  justify-self: center;
   margin-top: 3.6rem;
   color: #2e1559;
   font-size: 1.4rem;
@@ -402,18 +406,30 @@ a {
   flex-direction: column;
   margin-top: 3.8rem;
   list-style: none;
-  width: 21rem;
+  width: clamp(18rem, 75vw, 21rem);
   height: 29.3rem;
   border-radius: 0.8rem;
   border-radius: 8px;
-  border: 0.5px solid #b1adba;
   overflow: hidden;
+  scroll-snap-align: start;
+  flex: 0 0 auto;
+}
+.card__img {
+  width: 100%;
+  height: 75rem;
+  overflow: hidden;
+}
+.card__img img {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  object-fit: cover;
 }
 .card__naming {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 1rem 0.8rem;
 }
 .card__naming--name {
@@ -436,7 +452,7 @@ a {
 .card__description__age-gender-size {
   display: flex;
   flex-direction: row;
-  gap: 3.5rem;
+  gap: 3rem;
 }
 .card__description--icon-pet {
   width: 2rem;
@@ -488,11 +504,31 @@ a {
   background-color: rgb(67.3272727273, 30.7363636364, 130.2636363636);
 }
 
+.carousel-wrapper {
+  max-width: 100vw;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 1rem;
+  scrollbar-width: none;
+}
+.carousel-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
 .carousel {
-  width: 100%;
   display: flex;
-  align-items: row;
-  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  overflow-x: auto;
+  overflow-y: hidden;
+  flex-wrap: nowrap;
+}
+.carousel li {
+  scroll-snap-align: start;
+  flex: 0 0 auto;
 }
 
 .header {

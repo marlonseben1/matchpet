@@ -4,6 +4,8 @@
 html {
   // This defines what 1rem is
   font-size: 62.5%;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 body {
@@ -15,6 +17,7 @@ body {
   margin-bottom: 200rem;
   scroll-behavior: smooth;
   padding-top: 6.3rem;
+  overflow-x: hidden;
 }
 
 body.no-scroll {
