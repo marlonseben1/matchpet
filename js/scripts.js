@@ -35,6 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function handleResize() {
+  const petSlogan = document.querySelector(".featured-pets__slogan");
   const navigation = document.querySelector(".navigation");
   const isDesktop = window.innerWidth >= 1024;
   const checkbox = document.getElementById("checkbox");
@@ -48,6 +49,10 @@ function handleResize() {
     body.style.position = "";
     body.style.top = "";
     if (checkbox) checkbox.checked = false;
+    // Change text in featured-pets__slogan
+    petSlogan.textContent = "Venha se apaixonar!";
+  } else {
+    petSlogan.textContent = "Se apaixone!";
   }
 }
 

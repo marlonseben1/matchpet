@@ -401,6 +401,20 @@ a {
   text-decoration: underline;
 }
 
+@media (min-width: 1024px) {
+  .featured-pets__slogan {
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+  .featured-pets__title {
+    font-size: 3.2rem;
+    width: auto;
+  }
+  .featured-pets__paragraph {
+    font-size: 2.4rem;
+    width: auto;
+  }
+}
 .card {
   display: flex;
   flex-direction: column;
@@ -480,8 +494,8 @@ a {
   gap: 0.8rem;
 }
 .card__description--icon-pin {
-  height: 1.9rem;
   width: 1.9rem;
+  height: 1.9rem;
 }
 .card__description--location {
   font-size: 1.4rem;
@@ -504,6 +518,57 @@ a {
   background-color: rgb(67.3272727273, 30.7363636364, 130.2636363636);
 }
 
+@media (min-width: 1024px) {
+  .card {
+    width: 32.4rem;
+    height: 36.8rem;
+  }
+  .card__img {
+    height: 23rem;
+  }
+  .card__naming {
+    justify-content: space-between;
+    padding: 1rem 1.6rem;
+  }
+  .card__naming--name {
+    font-size: 2.4rem;
+  }
+  .card__naming--icon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .card__description {
+    padding: 1.6rem 1rem;
+  }
+  .card__description__age-gender-size {
+    width: 50%;
+    gap: 0;
+    justify-content: space-between;
+  }
+  .card__description--icon-pet {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+  .card__description--age {
+    font-size: 2rem;
+  }
+  .card__description--gender {
+    font-size: 2rem;
+  }
+  .card__description--size {
+    font-size: 2rem;
+  }
+  .card__description--icon-pin {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+  .card__description--location {
+    font-size: 2rem;
+  }
+  .card__description--button {
+    height: 10%;
+  }
+}
 .carousel-wrapper {
   max-width: 100vw;
   overflow-x: auto;
@@ -531,6 +596,17 @@ a {
   flex: 0 0 auto;
 }
 
+@media (min-width: 1024px) and (max-width: 1399px) {
+  .carousel li:nth-child(4) {
+    display: none;
+  }
+}
+@media (min-width: 1400px) {
+  .carousel li:nth-child(3),
+  .carousel li:nth-child(4) {
+    display: flex;
+  }
+}
 .header {
   display: flex;
   align-items: center;

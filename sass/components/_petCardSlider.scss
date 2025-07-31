@@ -27,3 +27,22 @@
     flex: 0 0 auto;
   }
 }
+
+// PC MEDIA QUERRY
+@media (min-width: $breakpoint-desktop) and (max-width: ($breakpoint-semi-big-desktop - 1px)) {
+  .carousel {
+    li:nth-child(4) {
+      display: none;
+    }
+  }
+}
+
+// SEMI-BIG PC MEDIA QUERRY
+@media (min-width: $breakpoint-semi-big-desktop) {
+  .carousel {
+    li:nth-child(3),
+    li:nth-child(4) {
+      display: flex;
+    }
+  }
+}

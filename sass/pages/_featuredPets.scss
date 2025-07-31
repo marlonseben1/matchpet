@@ -38,3 +38,24 @@
     }
   }
 }
+
+// PC MEDIA QUERRY
+
+@media (min-width: $breakpoint-desktop) {
+  .featured-pets {
+    &__slogan {
+      font-size: $font-desktop-body-16;
+      font-weight: $font-weight-semi-bold;
+    }
+
+    &__title {
+      font-size: $font-desktop-title-h3;
+      width: auto;
+    }
+
+    &__paragraph {
+      font-size: $font-desktop-body-24;
+      width: auto;
+    }
+  }
+}

@@ -83,8 +83,8 @@
     }
 
     &--icon-pin {
-      height: 1.9rem;
       width: 1.9rem;
+      height: 1.9rem;
     }
 
     &--location {
@@ -111,3 +111,70 @@
     }
   }
 }
+
+@media (min-width: $breakpoint-desktop) {
+  .card {
+    width: 32.4rem;
+    height: 36.8rem;
+
+    &__img {
+      height: 23rem;
+    }
+
+    &__naming {
+      justify-content: space-between;
+      padding: 1rem 1.6rem;
+
+      &--name {
+        font-size: $font-desktop-body-24;
+      }
+
+      &--icon {
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+    }
+
+    &__description {
+      padding: 1.6rem 1rem;
+
+      &__age-gender-size {
+        width: 50%;
+        gap: 0;
+        justify-content: space-between;
+      }
+
+      &--icon-pet {
+        width: 2.4rem;
+        height: 2.4rem;
+      }
+
+      &--age {
+        font-size: $font-mobile-body-16;
+      }
+
+      &--gender {
+        font-size: $font-mobile-body-16;
+      }
+
+      &--size {
+        font-size: $font-mobile-body-16;
+      }
+
+      &--icon-pin {
+        width: 2.4rem;
+        height: 2.4rem;
+      }
+
+      &--location {
+        font-size: $font-mobile-body-16;
+      }
+
+      &--button {
+        height: 10%;
+      }
+    }
+  }
+}
+
+// SEMI-BIG PC ADJUSTMENTS
