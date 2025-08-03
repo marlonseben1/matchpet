@@ -43,3 +43,54 @@
     margin-bottom: 1.6rem;
   }
 }
+
+@media (min-width: $breakpoint-desktop) {
+  .banner {
+    @include flex-row;
+    justify-content: space-around;
+    width: 90%;
+    height: 30.4rem;
+    margin-top: 10rem;
+    z-index: 500;
+    justify-self: center;
+    border-radius: 0.8rem;
+
+    &__header {
+      width: 59.2rem;
+      height: 25.4rem;
+
+      &__icon {
+        width: 2.8rem;
+        height: 2.8rem;
+      }
+
+      &__title {
+        font-size: $font-desktop-title-h3;
+        font-weight: $font-weight-bold;
+        margin-bottom: 1.6rem;
+      }
+    }
+
+    &__paragraph {
+      font-size: $font-desktop-body-20;
+      width: auto;
+    }
+
+    &__button {
+      width: 54rem;
+      height: 6rem;
+      transition: all 0.45s ease-in-out;
+    }
+
+    &__button:hover {
+      background-color: darken($color-primary-brand, 5%);
+    }
+
+    &__puppie {
+      width: 45.3rem;
+      height: 48.3rem;
+      margin-bottom: 12rem;
+      z-index: 800;
+    }
+  }
+}

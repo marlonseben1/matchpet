@@ -504,6 +504,50 @@ a {
   margin-bottom: 1.6rem;
 }
 
+@media (min-width: 1024px) {
+  .banner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 90%;
+    height: 30.4rem;
+    margin-top: 10rem;
+    z-index: 500;
+    justify-self: center;
+    border-radius: 0.8rem;
+  }
+  .banner__header {
+    width: 59.2rem;
+    height: 25.4rem;
+  }
+  .banner__header__icon {
+    width: 2.8rem;
+    height: 2.8rem;
+  }
+  .banner__header__title {
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-bottom: 1.6rem;
+  }
+  .banner__paragraph {
+    font-size: 2rem;
+    width: auto;
+  }
+  .banner__button {
+    width: 54rem;
+    height: 6rem;
+    transition: all 0.45s ease-in-out;
+  }
+  .banner__button:hover {
+    background-color: rgb(255, 107.2905405405, 81.5);
+  }
+  .banner__puppie {
+    width: 45.3rem;
+    height: 48.3rem;
+    margin-bottom: 12rem;
+    z-index: 800;
+  }
+}
 .adoption-cards {
   width: 100%;
   display: flex;
@@ -548,7 +592,7 @@ a {
   .adoption-cards {
     flex-direction: row;
     gap: 5rem;
-    margin-top: 2.4rem;
+    margin-bottom: 8rem;
   }
   .adoption-cards__card {
     width: 30.2rem;
