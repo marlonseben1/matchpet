@@ -1,0 +1,45 @@
+.banner {
+  width: 100%;
+  height: auto;
+  background-image: linear-gradient(to bottom, #2e1559 0%, #ff816b 100%);
+  @include flex-column;
+  align-items: center;
+
+  &__header {
+    width: 32.7rem;
+    height: auto;
+    margin: 2.4rem 0 1.6rem 0;
+
+    &__icon {
+      width: 2.8rem;
+      height: 2.8rem;
+    }
+
+    &__title {
+      color: $color-white;
+      font-size: $font-mobile-title-h3;
+    }
+  }
+
+  &__paragraph {
+    width: 32.7rem;
+    color: $color-white;
+    font-size: $font-mobile-body-12;
+    font-weight: $font-weight-regular;
+    margin-bottom: 1.6rem;
+  }
+
+  &__button {
+    @include defaultBtnPrimaryColorBackground;
+    width: 32.7rem;
+    height: 5.4rem;
+    font-size: $font-mobile-body-16;
+    margin-bottom: 1.6rem;
+  }
+
+  &__puppie {
+    width: 28.8rem;
+    height: auto;
+    margin-bottom: 1.6rem;
+  }
+}

@@ -270,7 +270,8 @@ a {
   border-radius: 0.8rem;
   border: none;
   cursor: pointer;
-  font-weight: 500;
+  font-weight: 600;
+  font-family: "Quicksand";
   transition: all 0.4s ease-in;
 }
 .homepage__text-and-buttons__adoption-btn:hover {
@@ -288,7 +289,8 @@ a {
   border-radius: 0.8rem;
   border: 1px solid #ff816b;
   cursor: pointer;
-  font-weight: 500;
+  font-weight: 600;
+  font-family: "Quicksand";
   transition: all 0.4s ease-in;
 }
 .homepage__text-and-buttons__donation-btn:hover {
@@ -454,6 +456,54 @@ a {
     text-align: center;
   }
 }
+.banner {
+  width: 100%;
+  height: auto;
+  background-image: linear-gradient(to bottom, #2e1559 0%, #ff816b 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.banner__header {
+  width: 32.7rem;
+  height: auto;
+  margin: 2.4rem 0 1.6rem 0;
+}
+.banner__header__icon {
+  width: 2.8rem;
+  height: 2.8rem;
+}
+.banner__header__title {
+  color: #fff;
+  font-size: 2.4rem;
+}
+.banner__paragraph {
+  width: 32.7rem;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-bottom: 1.6rem;
+}
+.banner__button {
+  text-align: center;
+  color: #fff;
+  background-color: #ff816b;
+  border-radius: 0.8rem;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: "Quicksand";
+  width: 32.7rem;
+  height: 5.4rem;
+  font-size: 2rem;
+  margin-bottom: 1.6rem;
+}
+.banner__puppie {
+  width: 28.8rem;
+  height: auto;
+  margin-bottom: 1.6rem;
+}
+
 .adoption-cards {
   width: 100%;
   display: flex;
@@ -465,7 +515,7 @@ a {
 .adoption-cards__card {
   box-shadow: 0 4px 8px rgba(255, 129, 107, 0.3);
   -webkit-box-shadow: 0 4px 8px rgba(255, 129, 107, 0.3);
-  -moz-box-shadow: 0 4px 8px rgba(255, 129, 107, 0.3);
+  -moz-box-shadow: 0 4px 10px rgba(255, 129, 107, 0.3);
   width: 34.3rem;
   height: 14.4rem;
   border: 0.5px solid #ff816b;

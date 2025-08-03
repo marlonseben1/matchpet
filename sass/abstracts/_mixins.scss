@@ -5,7 +5,8 @@
   border-radius: 0.8rem;
   border: none;
   cursor: pointer;
-  font-weight: 500;
+  font-weight: $font-weight-semi-bold;
+  font-family: "Quicksand";
 }
 
 @mixin defaultBtnTransparentBackground {
@@ -15,7 +16,8 @@
   border-radius: 0.8rem;
   border: 1px solid $color-primary-brand;
   cursor: pointer;
-  font-weight: 500;
+  font-weight: $font-weight-semi-bold;
+  font-family: "Quicksand";
 }
 
 @mixin flex-align-justify-center {
@@ -47,5 +49,5 @@
 @mixin drop-shadow {
   box-shadow: 0 4px 8px rgba(255, 129, 107, 0.3);
   -webkit-box-shadow: 0 4px 8px rgba(255, 129, 107, 0.3);
-  -moz-box-shadow: 0 4px 8px rgba(255, 129, 107, 0.3);
+  -moz-box-shadow: 0 4px 10px rgba(255, 129, 107, 0.3);
 }
