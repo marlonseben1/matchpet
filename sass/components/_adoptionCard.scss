@@ -37,3 +37,36 @@
     text-align: left;
   }
 }
+
+@media (min-width: $breakpoint-desktop) {
+  .adoption-cards {
+    flex-direction: row;
+    gap: 5rem;
+    margin-top: 2.4rem;
+
+    &__card {
+      width: 30.2rem;
+      height: 24.4rem;
+      padding: 1.4rem 2.4rem;
+    }
+
+    &__header {
+      @include flex-column;
+      width: 90%;
+      gap: 0;
+    }
+
+    &__icon {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+
+    &__title {
+      font-size: $font-desktop-title-h5;
+    }
+
+    &__paragraph {
+      font-size: $font-desktop-body-16;
+    }
+  }
+}

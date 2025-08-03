@@ -18,3 +18,21 @@
     text-align: center;
   }
 }
+
+@media (min-width: $breakpoint-desktop) {
+  .why-adopt {
+    margin-top: 12.5rem;
+
+    &__title-main {
+      width: 100%;
+      font-size: $font-desktop-title-h3;
+      text-align: center;
+    }
+
+    &__title-secondary {
+      width: 100%;
+      font-size: $font-desktop-body-24;
+      text-align: center;
+    }
+  }
+}

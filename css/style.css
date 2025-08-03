@@ -439,6 +439,21 @@ a {
   text-align: center;
 }
 
+@media (min-width: 1024px) {
+  .why-adopt {
+    margin-top: 12.5rem;
+  }
+  .why-adopt__title-main {
+    width: 100%;
+    font-size: 3.2rem;
+    text-align: center;
+  }
+  .why-adopt__title-secondary {
+    width: 100%;
+    font-size: 2.4rem;
+    text-align: center;
+  }
+}
 .adoption-cards {
   width: 100%;
   display: flex;
@@ -479,6 +494,34 @@ a {
   text-align: left;
 }
 
+@media (min-width: 1024px) {
+  .adoption-cards {
+    flex-direction: row;
+    gap: 5rem;
+    margin-top: 2.4rem;
+  }
+  .adoption-cards__card {
+    width: 30.2rem;
+    height: 24.4rem;
+    padding: 1.4rem 2.4rem;
+  }
+  .adoption-cards__header {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    gap: 0;
+  }
+  .adoption-cards__icon {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+  .adoption-cards__title {
+    font-size: 2rem;
+  }
+  .adoption-cards__paragraph {
+    font-size: 1.6rem;
+  }
+}
 .card {
   display: flex;
   flex-direction: column;
