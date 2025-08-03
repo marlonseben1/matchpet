@@ -414,7 +414,71 @@ a {
     font-size: 2.4rem;
     width: auto;
   }
+  .featured-pets__adoption-link {
+    font-size: 2rem;
+  }
 }
+.why-adopt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4.2rem;
+  flex-direction: column;
+}
+.why-adopt__title-main {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #221c30;
+}
+.why-adopt__title-secondary {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #756f82;
+  margin-top: 1.2rem;
+  width: 78%;
+  text-align: center;
+}
+
+.adoption-cards {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 3.1rem;
+}
+.adoption-cards__card {
+  box-shadow: 0 4px 8px rgba(255, 129, 107, 0.3);
+  -webkit-box-shadow: 0 4px 8px rgba(255, 129, 107, 0.3);
+  -moz-box-shadow: 0 4px 8px rgba(255, 129, 107, 0.3);
+  width: 34.3rem;
+  height: 14.4rem;
+  border: 0.5px solid #ff816b;
+  border-radius: 1.6rem;
+  padding: 1.6rem;
+  margin-bottom: 1.6rem;
+}
+.adoption-cards__header {
+  display: flex;
+  flex-direction: row;
+  gap: 1.6rem;
+}
+.adoption-cards__header__icon {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+.adoption-cards__title {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.adoption-cards__paragraph {
+  margin-top: 0.4rem;
+  width: 100%;
+  font-size: 1.4rem;
+  color: #756f82;
+  text-align: left;
+}
+
 .card {
   display: flex;
   flex-direction: column;

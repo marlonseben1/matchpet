@@ -1,0 +1,20 @@
+.why-adopt {
+  @include flex-align-justify-center;
+  margin-top: 4.2rem;
+  flex-direction: column;
+
+  &__title-main {
+    font-size: $font-mobile-title-h3;
+    font-weight: $font-weight-bold;
+    color: $color-gray-900;
+  }
+
+  &__title-secondary {
+    font-size: $font-mobile-title-h5;
+    font-weight: $font-weight-regular;
+    color: $color-gray-500;
+    margin-top: 1.2rem;
+    width: 78%;
+    text-align: center;
+  }
+}
