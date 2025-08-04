@@ -89,3 +89,14 @@ carousel.addEventListener("mousemove", (e) => {
   const walk = (x - startX) * 1.5; // drag sensitivity
   carousel.scrollLeft = scrollLeft - walk;
 });
+
+// Accordion
+const accordions = document.querySelectorAll(".accordion");
+
+accordions.forEach((accordion) => {
+  const header = accordion.querySelector(".accordion__header");
+
+  header.addEventListener("click", () => {
+    accordion.classList.toggle("active");
+  });
+});

@@ -1,0 +1,55 @@
+.accordion {
+  margin-top: 5rem;
+  padding: 0 2.4rem;
+  border-bottom: 0.7px solid $color-gray-300;
+
+  &__header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    border: 0;
+    margin-bottom: 1.2rem;
+
+    &--title {
+      font-size: $font-mobile-title-h4;
+      font-family: "Quicksand";
+      font-weight: $font-weight-bold;
+      color: $color-gray-700;
+    }
+
+    &--icon {
+      width: 1.8rem;
+      height: 1.8rem;
+      cursor: pointer;
+      transition: transform 0.2s linear;
+    }
+  }
+
+  &__body {
+    width: 32.7rem;
+    height: 10.5rem;
+    margin-bottom: 2.4rem;
+    display: none;
+    overflow: hidden;
+  }
+
+  &__paragraph {
+    font-size: $font-mobile-body-10;
+    font-weight: $font-weight-regular;
+    color: $color-gray-500;
+    width: 100%;
+  }
+
+  &.active {
+    .accordion__body {
+      height: 100%;
+      display: block;
+    }
+
+    .accordion__header--icon {
+      transform: rotate(180deg);
+    }
+  }
+}

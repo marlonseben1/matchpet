@@ -457,6 +457,60 @@ a {
     text-align: center;
   }
 }
+.faq-accordion {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-family: "Quicksand";
+}
+
+.accordion {
+  margin-top: 5rem;
+  padding: 0 2.4rem;
+  border-bottom: 0.7px solid #b1adba;
+}
+.accordion__header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+  border: 0;
+  margin-bottom: 1.2rem;
+}
+.accordion__header--title {
+  font-size: 1.8rem;
+  font-family: "Quicksand";
+  font-weight: 700;
+  color: #312845;
+}
+.accordion__header--icon {
+  width: 1.8rem;
+  height: 1.8rem;
+  cursor: pointer;
+  transition: transform 0.2s linear;
+}
+.accordion__body {
+  width: 32.7rem;
+  height: 10.5rem;
+  margin-bottom: 2.4rem;
+  display: none;
+  overflow: hidden;
+}
+.accordion__paragraph {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #756f82;
+  width: 100%;
+}
+.accordion.active .accordion__body {
+  height: 100%;
+  display: block;
+}
+.accordion.active .accordion__header--icon {
+  transform: rotate(180deg);
+}
+
 .banner {
   width: 100%;
   height: auto;
