@@ -1,5 +1,4 @@
 .accordion {
-  margin-top: 5rem;
   padding: 0 2.4rem;
   border-bottom: 0.7px solid $color-gray-300;
 
@@ -10,13 +9,15 @@
     justify-content: space-between;
     background-color: transparent;
     border: 0;
-    margin-bottom: 1.2rem;
+    margin-top: 1.6rem;
+    margin-bottom: 1.6rem;
 
     &--title {
       font-size: $font-mobile-title-h4;
       font-family: "Quicksand";
       font-weight: $font-weight-bold;
       color: $color-gray-700;
+      text-align: left;
     }
 
     &--icon {

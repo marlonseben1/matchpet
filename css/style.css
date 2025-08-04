@@ -465,7 +465,6 @@ a {
 }
 
 .accordion {
-  margin-top: 5rem;
   padding: 0 2.4rem;
   border-bottom: 0.7px solid #b1adba;
 }
@@ -476,13 +475,15 @@ a {
   justify-content: space-between;
   background-color: transparent;
   border: 0;
-  margin-bottom: 1.2rem;
+  margin-top: 1.6rem;
+  margin-bottom: 1.6rem;
 }
 .accordion__header--title {
   font-size: 1.8rem;
   font-family: "Quicksand";
   font-weight: 700;
   color: #312845;
+  text-align: left;
 }
 .accordion__header--icon {
   width: 1.8rem;
@@ -515,6 +516,7 @@ a {
   width: 100%;
   height: auto;
   margin-top: 3.5rem;
+  margin-bottom: 5rem;
   background-image: linear-gradient(to bottom, #2e1559 0%, #ff816b 100%);
   display: flex;
   flex-direction: column;
