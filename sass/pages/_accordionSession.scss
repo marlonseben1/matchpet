@@ -1,5 +1,43 @@
 .faq-accordion {
   @include flex-column;
   width: 100%;
-  font-family: "Quicksand";
+
+  &__paragraph {
+    align-self: center;
+    font-size: $font-mobile-body-10;
+    color: $color-primary-brand;
+    font-weight: $font-weight-semi-bold;
+  }
+
+  &__title {
+    align-self: center;
+    font-size: $font-mobile-title-h2;
+    color: $color-gray-900;
+    font-weight: $font-weight-bold;
+    margin-bottom: 3rem;
+  }
+
+  &__footer {
+    padding: 1.6rem 2.4rem;
+    margin-top: 2rem;
+    &--title {
+      font-size: $font-mobile-title-h4;
+      color: $color-gray-900;
+      font-weight: $font-weight-bold;
+    }
+
+    &--paragraph {
+      font-size: $font-mobile-body-12;
+      font-weight: $font-weight-regular;
+      margin-top: 1rem;
+      color: $color-gray-500;
+      width: 100%;
+      text-align: left;
+    }
+
+    &--paragraph span {
+      text-decoration: underline;
+      font-weight: $font-weight-semi-bold;
+    }
+  }
 }
