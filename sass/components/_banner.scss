@@ -1,6 +1,7 @@
 .banner {
   width: 100%;
   height: auto;
+  margin-top: 3.5rem;
   background-image: linear-gradient(to bottom, #2e1559 0%, #ff816b 100%);
   @include flex-column;
   align-items: center;
@@ -48,16 +49,18 @@
   .banner {
     @include flex-row;
     justify-content: space-around;
-    width: 90%;
-    height: 30.4rem;
+    width: 95%;
+    height: 37.4rem;
     margin-top: 10rem;
     z-index: 500;
     justify-self: center;
     border-radius: 0.8rem;
+    padding: 5rem;
 
     &__header {
       width: 59.2rem;
       height: 25.4rem;
+      align-self: center;
 
       &__icon {
         width: 2.8rem;
@@ -67,7 +70,6 @@
       &__title {
         font-size: $font-desktop-title-h3;
         font-weight: $font-weight-bold;
-        margin-bottom: 1.6rem;
       }
     }
 
@@ -87,10 +89,9 @@
     }
 
     &__puppie {
-      width: 45.3rem;
-      height: 48.3rem;
-      margin-bottom: 12rem;
+      transform: scale(1.8);
       z-index: 800;
+      padding-bottom: 5.5rem;
     }
   }
 }
