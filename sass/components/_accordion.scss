@@ -55,3 +55,21 @@
     }
   }
 }
+
+@media (min-width: $breakpoint-desktop) {
+  .accordion {
+    &__header {
+      &--title {
+        font-size: $font-mobile-title-h3;
+      }
+    }
+    &__body {
+      width: 78%;
+    }
+    &__paragraph {
+      width: 100%;
+      font-size: $font-desktop-body-18;
+      color: $color-gray-500;
+    }
+  }
+}

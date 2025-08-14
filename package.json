@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/marlonseben1/matchpet#readme",
   "devDependencies": {
-    "sass": "^1.89.2"
+    "sass": "^1.90.0"
   }
 }

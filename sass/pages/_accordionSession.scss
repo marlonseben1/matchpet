@@ -41,3 +41,19 @@
     }
   }
 }
+
+@media (min-width: $breakpoint-desktop) {
+  .faq-accordion {
+    width: 65%;
+    margin-top: 4%;
+    justify-self: center;
+
+    &__title {
+      margin-bottom: 4%;
+    }
+
+    &__footer {
+      display: none;
+    }
+  }
+}

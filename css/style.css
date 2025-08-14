@@ -497,6 +497,19 @@ a {
   font-weight: 600;
 }
 
+@media (min-width: 1024px) {
+  .faq-accordion {
+    width: 65%;
+    margin-top: 4%;
+    justify-self: center;
+  }
+  .faq-accordion__title {
+    margin-bottom: 4%;
+  }
+  .faq-accordion__footer {
+    display: none;
+  }
+}
 .accordion {
   padding: 0 2.4rem;
   border-bottom: 0.7px solid #b1adba;
@@ -546,6 +559,19 @@ a {
   transform: rotate(180deg);
 }
 
+@media (min-width: 1024px) {
+  .accordion__header--title {
+    font-size: 2.4rem;
+  }
+  .accordion__body {
+    width: 78%;
+  }
+  .accordion__paragraph {
+    width: 100%;
+    font-size: 1.8rem;
+    color: #756f82;
+  }
+}
 .banner {
   width: 100%;
   height: auto;
