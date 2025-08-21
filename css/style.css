@@ -366,6 +366,32 @@ a {
     gap: 10rem;
   }
 }
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+  text-align: center;
+  gap: 13rem;
+}
+.testimonials__heading__feedback {
+  color: #ff816b;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.testimonials__heading__title--main {
+  font-size: 2.8rem;
+  color: #221c30;
+  font-weight: 700;
+}
+.testimonials__heading__title--secondary {
+  font-size: 1.6rem;
+  color: #756f82;
+  width: 30rem;
+  font-weight: 600;
+}
+
 .featured-pets {
   display: flex;
   justify-content: center;
@@ -389,14 +415,13 @@ a {
   margin-top: 1.2rem;
   font-size: 1.6rem;
   color: #756f82;
-  text-align: center;
   font-weight: 400;
 }
 .featured-pets__adoption-link {
   justify-self: center;
   margin-top: 3.6rem;
   color: #2e1559;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 700;
   text-decoration: underline;
 }

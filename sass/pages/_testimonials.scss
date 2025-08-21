@@ -1,0 +1,29 @@
+.testimonials {
+  @include flex-column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+  text-align: center;
+  gap: 13rem;
+
+  &__heading {
+    &__feedback {
+      color: $color-primary-brand;
+      font-size: $font-mobile-body-10;
+      font-weight: $font-weight-semi-bold;
+    }
+
+    &__title--main {
+      font-size: $font-mobile-title-h2;
+      color: $color-gray-900;
+      font-weight: $font-weight-bold;
+    }
+
+    &__title--secondary {
+      font-size: $font-mobile-body-12;
+      color: $color-gray-500;
+      width: 30rem;
+      font-weight: $font-weight-semi-bold;
+    }
+  }
+}
