@@ -1,10 +1,11 @@
 .testimonials {
   @include flex-column;
+  width: 100%;
   justify-content: center;
   align-items: center;
   margin-top: 5rem;
   text-align: center;
-  gap: 13rem;
+  gap: 1rem;
 
   &__heading {
     &__feedback {

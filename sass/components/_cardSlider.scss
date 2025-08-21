@@ -4,6 +4,7 @@
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
   padding-bottom: 1rem;
+  
 
   scrollbar-width: none; // Firefox
 
@@ -13,9 +14,10 @@
 }
 
 .carousel {
+  box-sizing: border-box;
   display: flex;
   gap: 2rem;
-  padding: 2rem 1rem;
+  padding: 2rem 2rem;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   overflow-x: auto;
@@ -25,6 +27,13 @@
   li {
     scroll-snap-align: start;
     flex: 0 0 auto;
+  }
+
+  &__spacer {
+  pointer-events: none;
+  min-width: .5rem; // 
+  height: 100%; 
+  background: transparent;
   }
 }
 
