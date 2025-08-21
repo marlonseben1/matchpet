@@ -44,12 +44,13 @@
 
 @media (min-width: $breakpoint-desktop) {
   .faq-accordion {
-    width: 65%;
-    margin-top: 4%;
+    width: 75%;
+    margin-top: 5%;
     justify-self: center;
 
     &__title {
-      margin-bottom: 4%;
+      margin-bottom: 3%;
+      font-size: $font-desktop-title-h3;
     }
 
     &__footer {

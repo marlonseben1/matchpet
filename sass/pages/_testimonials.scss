@@ -6,6 +6,7 @@
   margin-top: 5rem;
   text-align: center;
   gap: 1rem;
+  
 
   &__heading {
     &__feedback {
@@ -28,3 +29,26 @@
     }
   }
 }
+
+@media (min-width: $breakpoint-desktop) {
+  .testimonials {
+    margin-top: 7%;
+
+    &__heading {
+
+      &__feedback {
+        display: none;
+      }
+
+      &__title--main {
+        font-size: $font-desktop-title-h3;
+      }
+
+      &__title--secondary {
+        font-size: $font-desktop-body-24;
+        width: 100%;
+      }
+    }
+  }
+}
+
