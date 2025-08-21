@@ -381,7 +381,7 @@ a {
   font-weight: 600;
 }
 .testimonials__heading__title--main {
-  font-size: 2.8rem;
+  font-size: 2.4rem;
   color: #221c30;
   font-weight: 700;
 }
@@ -398,6 +398,13 @@ a {
   align-items: center;
   flex-direction: column;
   margin-top: 8.4rem;
+}
+.featured-pets__carousel-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 4.8rem;
 }
 .featured-pets__slogan {
   font-size: 1.6rem;
@@ -418,7 +425,7 @@ a {
   font-weight: 400;
 }
 .featured-pets__adoption-link {
-  justify-self: center;
+  text-align: center;
   margin-top: 3.6rem;
   color: #2e1559;
   font-size: 1.6rem;

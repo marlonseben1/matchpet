@@ -3,6 +3,12 @@
   flex-direction: column;
   margin-top: 8.4rem;
 
+  &__carousel-buttons {
+    @include flex-align-justify-center;
+    width: 100%;
+    margin-top: 4.8rem;
+  }
+
   &__slogan {
     font-size: $font-mobile-body-12;
     color: $color-primary-brand;
