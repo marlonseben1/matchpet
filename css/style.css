@@ -19,7 +19,6 @@ body {
   font-weight: 400;
   line-height: 1.5;
   color: #312845;
-  margin-bottom: 200rem;
   scroll-behavior: smooth;
   padding-top: 6.3rem;
   overflow-x: hidden;
@@ -197,6 +196,77 @@ a {
     transform: scale(1.2);
   }
 }
+.footer {
+  width: 100vw;
+  height: 68rem;
+  padding: 4rem 2.4rem;
+  background-color: #221c30;
+  gap: 2.4rem;
+  margin-top: 4rem;
+}
+.footer__logo {
+  margin-bottom: 2.4rem;
+}
+.footer__quote {
+  font-size: 1.4rem;
+  color: #b1adba;
+  margin-bottom: 2.4rem;
+}
+.footer__email {
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: #d1cfd4;
+  margin-bottom: 1.6rem;
+}
+.footer__socials {
+  display: flex;
+  flex-direction: row;
+  gap: 1.6rem;
+}
+.footer__socials__logo--whatsapp, .footer__socials__logo--instagram, .footer__socials__logo--youtube, .footer__socials__logo--facebook {
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.footer__socials__logo--whatsapp:hover, .footer__socials__logo--instagram:hover, .footer__socials__logo--youtube:hover, .footer__socials__logo--facebook:hover {
+  transform: scale(1.1);
+}
+.footer__links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 4rem;
+}
+.footer__link {
+  font-size: 1.6rem;
+  color: #b1adba;
+}
+.footer__title {
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: #fff;
+  margin-bottom: 1.6rem;
+}
+.footer__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  cursor: pointer;
+}
+.footer__section {
+  width: 50%;
+}
+.footer__section--pets {
+  margin-bottom: 2rem;
+}
+.footer__copywright {
+  text-align: center;
+  margin-top: 4.6rem;
+  color: #d1cfd4;
+  font-size: 1.4rem;
+}
+
 .homepage {
   display: flex;
   justify-content: center;

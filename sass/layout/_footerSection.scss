@@ -1,0 +1,86 @@
+.footer {
+  width: 100vw;
+  height: 68rem;
+  padding: 4rem 2.4rem;
+  background-color: $color-gray-900;
+  gap: 2.4rem;
+  margin-top: 4rem;
+
+  &__logo {
+    margin-bottom: 2.4rem;
+  }
+
+  &__quote {
+    font-size: $font-mobile-body-10;
+    color: $color-gray-300;
+    margin-bottom: 2.4rem;
+  }
+
+  &__email {
+    font-weight: $font-weight-semi-bold;
+    font-size: $font-mobile-body-10;
+    color: $color-gray-200;
+    margin-bottom: 1.6rem;
+  }
+
+  &__socials {
+    @include flex-row;
+    gap: 1.6rem;
+
+    &__logo--whatsapp,
+    &__logo--instagram,
+    &__logo--youtube,
+    &__logo--facebook {
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
+    }
+
+    &__logo--whatsapp:hover,
+    &__logo--instagram:hover,
+    &__logo--youtube:hover,
+    &__logo--facebook:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__links {
+    @include flex-row;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 4rem;
+  }
+
+  &__link {
+    font-size: $font-mobile-body-12;
+    color: $color-gray-300;
+  }
+
+  &__title {
+    font-weight: $font-weight-bold;
+    font-size: $font-mobile-title-h5;
+    color: $color-white;
+    margin-bottom: 1.6rem;
+  }
+
+  &__list {
+    list-style: none;
+    @include flex-column;
+    gap: 1.6rem;
+    cursor: pointer;
+  }
+
+  &__section {
+    width: 50%;
+
+    &--pets {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__copywright {
+    text-align: center;
+    margin-top: 4.6rem;
+    color: $color-gray-200;
+    font-size: $font-mobile-body-10;
+  }
+}
