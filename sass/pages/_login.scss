@@ -1,0 +1,92 @@
+.login {
+  @include flex-column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  &__headings {
+    @include flex-column;
+    width: 90%;
+    justify-content: center;
+    gap: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  &__logo {
+    width: 12.7rem;
+    height: 3.4rem;
+  }
+
+  &__title {
+    font-size: $font-mobile-title-h3;
+    color: $color-gray-700;
+    font-weight: $font-weight-bold;
+  }
+
+  &__subtitle {
+    font-size: $font-mobile-title-h5;
+    color: $color-gray-500;
+    font-weight: $font-weight-regular;
+  }
+
+  &__form {
+    @include flex-column;
+    width: 90%;
+  }
+
+  &__label {
+    font-size: $font-mobile-body-12;
+    color: $color-gray-700;
+    margin-top: 2.4rem;
+  }
+
+  &__input {
+    border: 0.1rem solid $color-gray-200;
+    width: 100%;
+    height: 4.8rem;
+    border-radius: 0.8rem;
+    outline: none;
+    padding: 1rem;
+  }
+
+  &__input::placeholder {
+    padding: 1rem;
+    font-size: $font-mobile-body-12;
+    color: $color-gray-200;
+  }
+
+  &__input:focus::placeholder {
+    color: transparent;
+  }
+
+  &__forgot-password {
+    align-self: flex-end;
+    font-size: $font-mobile-body-12;
+    color: $color-secondary-dark;
+    font-weight: $font-weight-semi-bold;
+    text-decoration: underline;
+    margin: 1rem 0 2.4rem 0;
+  }
+
+  &__btn {
+    @include defaultBtnPrimaryColorBackground;
+    @include drop-shadow;
+    font-size: $font-mobile-body-16;
+    height: 4.8rem;
+  }
+
+  &__text {
+    font-size: $font-mobile-body-12;
+    color: $color-gray-500;
+    font-weight: $font-weight-regular;
+    margin-top: 2.4rem;
+    text-align: center;
+    text-wrap: wrap;
+  }
+
+  &__link {
+    color: $color-secondary-dark;
+    text-decoration: underline;
+    font-weight: $font-weight-semi-bold;
+  }
+}

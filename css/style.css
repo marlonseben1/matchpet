@@ -15,7 +15,7 @@ html {
 
 body {
   box-sizing: border-box;
-  font-family: "Quicksand";
+  font-family: "Quicksand", sans-serif;
   font-weight: 400;
   line-height: 1.5;
   color: #312845;
@@ -260,7 +260,7 @@ a {
 .footer__section--pets {
   margin-bottom: 2rem;
 }
-.footer__copywright {
+.footer__copyright {
   text-align: center;
   margin-top: 4.6rem;
   color: #d1cfd4;
@@ -343,7 +343,7 @@ a {
   border: none;
   cursor: pointer;
   font-weight: 600;
-  font-family: "Quicksand";
+  font-family: "Quicksand", sans-serif;
   transition: all 0.4s ease-in;
 }
 .homepage__text-and-buttons__adoption-btn:hover {
@@ -362,7 +362,7 @@ a {
   border: 1px solid #ff816b;
   cursor: pointer;
   font-weight: 600;
-  font-family: "Quicksand";
+  font-family: "Quicksand", sans-serif;
   transition: all 0.4s ease-in;
 }
 .homepage__text-and-buttons__donation-btn:hover {
@@ -437,6 +437,98 @@ a {
     gap: 10rem;
   }
 }
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.login__headings {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+}
+.login__logo {
+  width: 12.7rem;
+  height: 3.4rem;
+}
+.login__title {
+  font-size: 2.4rem;
+  color: #312845;
+  font-weight: 700;
+}
+.login__subtitle {
+  font-size: 1.6rem;
+  color: #756f82;
+  font-weight: 400;
+}
+.login__form {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+.login__label {
+  font-size: 1.6rem;
+  color: #312845;
+  margin-top: 2.4rem;
+}
+.login__input {
+  border: 0.1rem solid #d1cfd4;
+  width: 100%;
+  height: 4.8rem;
+  border-radius: 0.8rem;
+  outline: none;
+  padding: 1rem;
+}
+.login__input::placeholder {
+  padding: 1rem;
+  font-size: 1.6rem;
+  color: #d1cfd4;
+}
+.login__input:focus::placeholder {
+  color: transparent;
+}
+.login__forgot-password {
+  align-self: flex-end;
+  font-size: 1.6rem;
+  color: #2e1559;
+  font-weight: 600;
+  text-decoration: underline;
+  margin: 1rem 0 2.4rem 0;
+}
+.login__btn {
+  text-align: center;
+  color: #fff;
+  background-color: #ff816b;
+  border-radius: 0.8rem;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: "Quicksand", sans-serif;
+  box-shadow: 0 4px 8px rgba(255, 129, 107, 0.3);
+  -webkit-box-shadow: 0 4px 8px rgba(255, 129, 107, 0.3);
+  -moz-box-shadow: 0 4px 10px rgba(255, 129, 107, 0.3);
+  font-size: 2rem;
+  height: 4.8rem;
+}
+.login__text {
+  font-size: 1.6rem;
+  color: #756f82;
+  font-weight: 400;
+  margin-top: 2.4rem;
+  text-align: center;
+  text-wrap: wrap;
+}
+.login__link {
+  color: #2e1559;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
 .testimonials {
   display: flex;
   flex-direction: column;
@@ -646,7 +738,7 @@ a {
 }
 .accordion__header--title {
   font-size: 1.8rem;
-  font-family: "Quicksand";
+  font-family: "Quicksand", sans-serif;
   font-weight: 700;
   color: #312845;
   text-align: left;
@@ -731,7 +823,7 @@ a {
   border: none;
   cursor: pointer;
   font-weight: 600;
-  font-family: "Quicksand";
+  font-family: "Quicksand", sans-serif;
   width: 32.7rem;
   height: 5.4rem;
   font-size: 2rem;
@@ -909,7 +1001,6 @@ a {
   width: clamp(18rem, 75vw, 21rem);
   height: 29.3rem;
   border-radius: 0.8rem;
-  border-radius: 8px;
   overflow: hidden;
   scroll-snap-align: start;
   flex: 0 0 auto;
