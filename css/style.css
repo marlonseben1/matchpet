@@ -438,10 +438,6 @@ a {
   }
 }
 .login {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   width: 100%;
 }
 .login__headings {
@@ -451,6 +447,17 @@ a {
   justify-content: center;
   gap: 1.2rem;
   margin-bottom: 2rem;
+}
+.login__container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.login__login-picture {
+  display: none;
 }
 .login__logo {
   width: 12.7rem;
@@ -529,6 +536,57 @@ a {
   font-weight: 600;
 }
 
+@media (min-width: 1024px) {
+  body {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+  }
+  .login {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100vw;
+    height: 100vh;
+  }
+  .login__logo {
+    width: 17rem;
+    height: 3.8rem;
+  }
+  .login__headings, .login__form {
+    width: 70%;
+  }
+  .login__input, .login__btn {
+    width: 100%;
+  }
+  .login__title {
+    font-size: 3.2rem;
+  }
+  .login__subtitle {
+    font-size: 2.4rem;
+  }
+  .login__label, .login__input::placeholder {
+    font-size: 2rem;
+    width: auto;
+  }
+  .login__input::placeholder {
+    color: #b1adba;
+  }
+  .login__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+  }
+  .login__login-picture {
+    width: 50%;
+    height: 100vh;
+    display: block;
+    object-fit: cover;
+  }
+  .login__forgot-password, .login__text {
+    font-size: 1.8rem;
+  }
+}
 .testimonials {
   display: flex;
   flex-direction: column;

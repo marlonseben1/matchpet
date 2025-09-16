@@ -8,41 +8,48 @@
   </head>
   <body>
     <section class="login">
-      <div class="login__headings">
-        <img
-          class="login__logo"
-          src="img/icon_logo.svg"
-          alt="Logo do Matchpet"
-        />
-        <h1 class="login__title">Seja bem-vindo de volta!</h1>
-        <p class="login__subtitle">Seu match está a sua espera</p>
+      <img
+        src="/img/picture_cat--login.png"
+        class="login__login-picture"
+        alt="Gato tocando humano"
+      />
+      <div class="login__container">
+        <div class="login__headings">
+          <img
+            class="login__logo"
+            src="img/icon_logo.svg"
+            alt="Logo do Matchpet"
+          />
+          <h1 class="login__title">Seja bem-vindo de volta!</h1>
+          <p class="login__subtitle">Seu match está a sua espera</p>
+        </div>
+        <form class="login__form" action="#">
+          <label class="login__label" for="email">E-mail</label>
+          <input
+            class="login__input"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Digite seu e-mail"
+            required
+          />
+          <label class="login__label" for="password">Senha</label>
+          <input
+            class="login__input"
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Digite sua senha"
+            required
+          />
+          <a class="login__forgot-password" href="#">Esqueci minha senha</a>
+          <button class="login__btn btn" type="submit">Entrar</button>
+          <p class="login__text">
+            Não tem uma conta?<br />
+            <a class="login__link" href="register.html">Cadastrar agora</a>
+          </p>
+        </form>
       </div>
-      <form class="login__form" action="#">
-        <label class="login__label" for="email">E-mail</label>
-        <input
-          class="login__input"
-          type="email"
-          id="email"
-          name="email"
-          placeholder="Digite seu e-mail"
-          required
-        />
-        <label class="login__label" for="password">Senha</label>
-        <input
-          class="login__input"
-          type="password"
-          id="password"
-          name="password"
-          placeholder="Digite sua senha"
-          required
-        />
-        <a class="login__forgot-password" href="#">Esqueci minha senha</a>
-        <button class="login__btn btn" type="submit">Entrar</button>
-        <p class="login__text">
-          Não tem uma conta?<br />
-          <a class="login__link" href="register.html">Cadastrar agora</a>
-        </p>
-      </form>
     </section>
   </body>
 </html>
