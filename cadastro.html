@@ -33,16 +33,6 @@
         </div>
         <form class="register__form" action="#">
 
-            <label class="register__label" for="full-name">Nome completo</label>
-          <input
-            class="register__input"
-            type="text"
-            id="full-name"
-            name="full-name"
-            placeholder="Ex: Maria da Silva"
-            required
-          />
-
           <label class="register__label" for="email">E-mail</label>
           <input
             class="register__input"
@@ -71,6 +61,15 @@
             placeholder="Confirme sua senha"
             required
           />
+        <div class="register__checkbox">
+          <input type="checkbox" class="register__checkbox-input" name="register" id="register-checkbox" required>
+          <label class="register__checkbox-label" for="register-checkbox">Ao criar sua conta você aceita nossos termos de uso e política de privacidade</label>
+          </div>
+          <button class="register__btn btn" type="submit">Criar conta</button>
+          <p class="register__text">
+            Já tem uma conta?<br />
+            <a class="register__link" href="login.html">Acesse aqui</a>
+          </p>
       </div>
     </section>
   </body>

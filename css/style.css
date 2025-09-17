@@ -599,7 +599,7 @@ a {
   width: 90%;
   justify-content: center;
   gap: 1.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.2rem;
 }
 .register__logo {
   width: 12.7rem;
@@ -631,7 +631,8 @@ a {
 .register__label {
   font-size: 1.6rem;
   color: #312845;
-  margin-top: 2.4rem;
+  margin-top: 1.8rem;
+  font-weight: 600;
 }
 .register__input {
   border: 0.1rem solid #d1cfd4;
@@ -640,6 +641,64 @@ a {
   border-radius: 0.8rem;
   outline: none;
   padding: 1rem;
+}
+.register__input::placeholder {
+  padding: 1rem;
+  font-size: 1.6rem;
+  color: #d1cfd4;
+}
+.register__input:focus::placeholder {
+  color: transparent;
+}
+.register__btn {
+  text-align: center;
+  color: #fff;
+  background-color: #ff816b;
+  border-radius: 0.8rem;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: "Quicksand", sans-serif;
+  box-shadow: 0 4px 8px rgba(255, 129, 107, 0.3);
+  -webkit-box-shadow: 0 4px 8px rgba(255, 129, 107, 0.3);
+  -moz-box-shadow: 0 4px 10px rgba(255, 129, 107, 0.3);
+  font-size: 2rem;
+  height: 4.8rem;
+}
+.register__link {
+  color: #2e1559;
+  text-decoration: underline;
+  font-weight: 600;
+}
+.register__text {
+  font-size: 1.6rem;
+  color: #756f82;
+  font-weight: 400;
+  margin-top: 2.4rem;
+  text-align: center;
+  text-wrap: wrap;
+}
+.register__checkbox {
+  display: flex;
+  flex-direction: row;
+  gap: 0.8rem;
+  margin: 2rem 0;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+.register__checkbox-input {
+  width: 3rem;
+  height: 3rem;
+  border: none;
+  border-radius: 0.6rem;
+  accent-color: #221c30;
+}
+.register__checkbox-label {
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+  cursor: pointer;
 }
 
 .testimonials {
