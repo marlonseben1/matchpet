@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Página de cadastro de conta para o projeto fictício sobre adoção de pets 'Matchpet' criado por Mainá Palacios e desenvolvido por Marlon Seben"
+    />
+    <title>Criar conta</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="icon" type="image/x-icon" href="/img/icon_favicon.svg" />
+  </head>
+  <body>
+    <section class="register">
+      <img
+        src="/img/picture_dog--register.webp"
+        class="register__register-picture"
+        alt="Cachorro feliz no colo de humano"
+      />
+      <div class="register__container">
+        <div class="register__headings">
+          <img
+            class="register__logo"
+            src="img/icon_logo.svg"
+            alt="Logo do Matchpet"
+          />
+          <h1 class="register__title">Crie sua conta</h1>
+          <p class="register__subtitle">
+            Para iniciar sua jornada de adoção, você precisa ter um cadastro
+          </p>
+          
+        </div>
+        <form class="register__form" action="#">
+
+            <label class="register__label" for="full-name">Nome completo</label>
+          <input
+            class="register__input"
+            type="text"
+            id="full-name"
+            name="full-name"
+            placeholder="Ex: Maria da Silva"
+            required
+          />
+
+          <label class="register__label" for="email">E-mail</label>
+          <input
+            class="register__input"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Digite seu e-mail"
+            required
+          />
+          <label class="register__label" for="password">Senha</label>
+          <input
+            class="register__input"
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Digite sua senha"
+            required
+          />
+
+        <label class="register__label" for="confirm-password">Confirmar senha</label>
+          <input
+            class="register__input"
+            type="password"
+            id="confirm-password"
+            name="password"
+            placeholder="Confirme sua senha"
+            required
+          />
+      </div>
+    </section>
+  </body>
+</html>
