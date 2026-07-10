@@ -1,0 +1,25 @@
+---
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
+
+interface Props {
+  icon: ImageMetadata;
+  iconAlt: string;
+  title: string;
+  paragraph: string;
+}
+
+const { icon, iconAlt, title, paragraph } = Astro.props;
+---
+
+<div
+  class="mb-4 h-[144px] w-[343px] rounded-[16px] border-[0.5px] border-primary-brand p-4 shadow-brand lg:h-[244px] lg:w-[302px] lg:px-6 lg:py-[14px]"
+>
+  <div class="flex flex-row gap-4 lg:w-[90%] lg:flex-col lg:gap-0">
+    <Image src={icon} alt={iconAlt} loading="lazy" class="h-6 w-6" />
+    <h5 class="text-mobile-h5 font-bold lg:text-desktop-h5">{title}</h5>
+  </div>
+  <p class="mt-1 w-full text-left text-mobile-body-10 text-neutral-500 lg:text-desktop-body-16">
+    {paragraph}
+  </p>
+</div>

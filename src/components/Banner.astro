@@ -1,0 +1,32 @@
+---
+import { Image } from "astro:assets";
+import heartPet from "../assets/img/iconHeartPet.svg";
+import puppie from "../assets/img/picturePuppie.svg";
+---
+
+<section
+  class="mt-[35px] mb-[50px] flex w-full flex-col items-center bg-linear-to-b from-secondary-dark to-primary-brand lg:mt-[100px] lg:w-[95%] lg:h-[374px] lg:flex-row lg:justify-around lg:justify-self-center lg:rounded-lg lg:p-[50px] lg:z-[500]"
+>
+  <div class="my-6 mb-4 h-auto w-[327px] lg:h-[254px] lg:w-[592px] lg:self-center">
+    <div>
+      <Image src={heartPet} alt="Coração e pata de pet" class="h-7 w-7" />
+      <h3 class="text-mobile-h3 text-white lg:text-desktop-h3 lg:font-bold">
+        Atenção: este site contém altos níveis de fofura e risco de se apaixonar.
+      </h3>
+    </div>
+    <p class="mb-4 w-[327px] text-mobile-body-12 font-normal text-white lg:w-auto lg:text-desktop-body-20">
+      O amor da sua vida pode ter patas, penas ou bigodes.
+    </p>
+    <button
+      class="btn-primary mb-4 h-[54px] w-[327px] text-mobile-body-16 lg:h-[60px] lg:w-[540px] lg:transition-colors lg:duration-[450ms] lg:ease-in-out lg:hover:bg-primary-brand-hover-5"
+    >
+      Adotar pet
+    </button>
+  </div>
+  <Image
+    src={puppie}
+    alt="Filhote de cachorro fofinho"
+    loading="lazy"
+    class="mb-4 h-auto w-[288px] lg:z-[800] lg:scale-[1.8] lg:pb-[55px]"
+  />
+</section>

@@ -1,0 +1,42 @@
+<div
+  class="max-w-[100vw] overflow-x-auto pb-[10px] [-webkit-overflow-scrolling:touch] [scroll-snap-type:x_mandatory] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+>
+  <ul
+    class="carousel box-border flex list-none flex-nowrap gap-5 overflow-x-auto overflow-y-hidden scroll-smooth px-5 py-5 [scroll-snap-type:x_mandatory]"
+  >
+    <li class="pointer-events-none h-full min-w-[5px] flex-none bg-transparent [scroll-snap-align:start]"></li>
+    <slot />
+  </ul>
+</div>
+
+<script>
+  const carousels = document.querySelectorAll<HTMLElement>(".carousel");
+
+  carousels.forEach((carousel) => {
+    let isDown = false;
+    let startX = 0;
+    let scrollLeft = 0;
+
+    carousel.addEventListener("mousedown", (e) => {
+      isDown = true;
+      startX = e.pageX - carousel.offsetLeft;
+      scrollLeft = carousel.scrollLeft;
+    });
+
+    carousel.addEventListener("mouseleave", () => {
+      isDown = false;
+    });
+
+    carousel.addEventListener("mouseup", () => {
+      isDown = false;
+    });
+
+    carousel.addEventListener("mousemove", (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - carousel.offsetLeft;
+      const walk = (x - startX) * 1.5;
+      carousel.scrollLeft = scrollLeft - walk;
+    });
+  });
+</script>

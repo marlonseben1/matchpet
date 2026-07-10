@@ -1,0 +1,141 @@
+@import "tailwindcss";
+
+@theme {
+  /* Font family */
+  --font-sans: "Quicksand", sans-serif;
+
+  /* Colors — primary */
+  --color-primary-brand: #ff816b;
+  --color-primary-brand-hover: #ff5638; /* darken($color-primary-brand, 10%) */
+  --color-primary-brand-hover-5: #ff6b52; /* darken($color-primary-brand, 5%) */
+  --color-primary-brand-light-10: #ffac9e; /* lighten($color-primary-brand, 10%) */
+  --color-primary-medium: #ffd4cc;
+  --color-primary-light: #fff0ed;
+
+  /* Colors — secondary */
+  --color-secondary-dark: #2e1559;
+  --color-secondary-dark-hover: #431f82; /* lighten($color-secondary-dark, 10%) */
+  --color-secondary-medium: #a571ff;
+  --color-secondary-light: #e0cfff;
+
+  /* Colors — tertiary */
+  --color-tertiary-medium: #fff284;
+  --color-tertiary-light: #fffdd3;
+
+  /* Colors — neutral (originally "gray" in the Sass scale) */
+  --color-neutral-900: #221c30;
+  --color-neutral-700: #312845;
+  --color-neutral-500: #756f82;
+  --color-neutral-300: #b1adba;
+  --color-neutral-200: #d1cfd4;
+  --color-neutral-100: #f8f5ff;
+
+  /* Colors — feedback */
+  --color-feedback-error: #c44d4d;
+  --color-feedback-alert: #fff284;
+  --color-feedback-success: #37693f;
+
+  /* Breakpoints beyond Tailwind's defaults (md=768px and lg=1024px already
+     match the original $breakpoint-tablet / $breakpoint-desktop) */
+  --breakpoint-semi-desktop: 87.5rem; /* 1400px */
+  --breakpoint-big-desktop: 100rem; /* 1600px */
+
+  /* Type scale — converted from the original 62.5% (1rem = 10px) root
+     to Tailwind's standard 1rem = 16px root, keeping identical px sizes */
+
+  /* Desktop headings */
+  --text-desktop-h1: 4rem;
+  --text-desktop-h2: 2.5rem;
+  --text-desktop-h3: 2rem;
+  --text-desktop-h4: 1.5rem;
+  --text-desktop-h5: 1.25rem;
+  --text-desktop-h6: 1.125rem;
+
+  /* Desktop body */
+  --text-desktop-body-32: 2rem;
+  --text-desktop-body-28: 1.75rem;
+  --text-desktop-body-24: 1.5rem;
+  --text-desktop-body-20: 1.25rem;
+  --text-desktop-body-18: 1.125rem;
+  --text-desktop-body-16: 1rem;
+
+  /* Mobile headings */
+  --text-mobile-h1: 2rem;
+  --text-mobile-h2: 1.75rem;
+  --text-mobile-h3: 1.5rem;
+  --text-mobile-h4: 1.125rem;
+  --text-mobile-h5: 1rem;
+
+  /* Mobile body */
+  --text-mobile-body-24: 2rem;
+  --text-mobile-body-20: 1.75rem;
+  --text-mobile-body-18: 1.5rem;
+  --text-mobile-body-16: 1.25rem;
+  --text-mobile-body-14: 1.125rem;
+  --text-mobile-body-12: 1rem;
+  --text-mobile-body-10: 0.875rem;
+
+  /* Brand drop shadow (was the drop-shadow() Sass mixin) */
+  --shadow-brand: 0 4px 8px rgba(255, 129, 107, 0.3);
+
+  /* Mobile nav open/close animation (was layout/_navigation.scss) */
+  --animate-move-in-left-to-right: moveInLeftToRight 0.5s
+    cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+  --animate-move-out-right-to-left: moveOutRightToLeft 0.5s
+    cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+}
+
+@keyframes moveInLeftToRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveOutRightToLeft {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--color-neutral-700);
+    padding-top: 3.9375rem; /* 63px, was $header height offset */
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+
+  body.no-scroll {
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply text-center text-white bg-primary-brand rounded-lg border-none cursor-pointer font-semibold font-sans;
+  }
+
+  .btn-outline {
+    @apply text-center text-primary-brand bg-transparent rounded-lg border border-primary-brand cursor-pointer font-semibold font-sans;
+  }
+}

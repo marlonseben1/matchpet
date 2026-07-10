@@ -1,0 +1,17 @@
+---
+interface Props {
+  name: string;
+  location: string;
+  paragraph: string;
+}
+
+const { name, location, paragraph } = Astro.props;
+---
+
+<li
+  class="flex h-[248px] w-[210px] flex-none flex-col justify-start gap-1 rounded-[6px] border-[0.5px] border-primary-brand px-6 py-4 text-left shadow-brand [scroll-snap-align:start] lg:h-[199px] lg:w-[483px]"
+>
+  <p class="text-mobile-h5 text-neutral-900 lg:text-desktop-h4">{name}</p>
+  <p class="text-mobile-body-10 text-neutral-700 lg:text-desktop-body-18">{location}</p>
+  <p class="w-full text-mobile-body-10 text-neutral-500 lg:text-desktop-body-16">{paragraph}</p>
+</li>

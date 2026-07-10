@@ -1,2 +1,19 @@
 node_modules/
 .idea/
+
+# Astro build output
+dist/
+.astro/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment variables
+.env
+.env.production
+
+# macOS
+.DS_Store
