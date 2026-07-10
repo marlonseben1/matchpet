@@ -1,0 +1,68 @@
+---
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
+import likeIcon from "../assets/img/iconLike.svg";
+import pinIcon from "../assets/img/iconPin.svg";
+
+interface Props {
+  image: ImageMetadata;
+  imageAlt: string;
+  name: string;
+  speciesIcon: ImageMetadata;
+  speciesIconAlt: string;
+  age: string;
+  gender: string;
+  size: string;
+  location: string;
+  hideOnMidDesktop?: boolean;
+}
+
+const {
+  image,
+  imageAlt,
+  name,
+  speciesIcon,
+  speciesIconAlt,
+  age,
+  gender,
+  size,
+  location,
+  hideOnMidDesktop = false,
+} = Astro.props;
+---
+
+<li
+  class:list={[
+    "flex h-[293px] w-[clamp(180px,75vw,210px)] flex-none flex-col overflow-hidden rounded-lg mt-[38px] list-none [scroll-snap-align:start] lg:h-[368px] lg:w-[324px]",
+    { "lg:max-semi-desktop:hidden": hideOnMidDesktop },
+  ]}
+>
+  <div class="h-[115px] w-full overflow-hidden lg:h-[230px]">
+    <Image src={image} alt={imageAlt} class="h-full w-full overflow-hidden object-cover" />
+  </div>
+  <div class="flex flex-row items-center justify-around px-[8px] py-[10px] lg:justify-between lg:px-[16px] lg:py-[10px]">
+    <p class="w-[160px] text-mobile-body-12 font-semibold text-black lg:text-desktop-body-24">{name}</p>
+    <Image src={likeIcon} alt="Ícone favoritar pet" class="cursor-pointer lg:h-[25px] lg:w-[25px]" />
+  </div>
+  <div class="flex flex-row flex-wrap items-center gap-[10px] px-[8px] py-[10px] lg:px-[10px] lg:py-[16px]">
+    <Image src={speciesIcon} alt={speciesIconAlt} class="h-[20px] w-[20px] lg:h-[24px] lg:w-[24px]" />
+    <div class="flex flex-row gap-[30px] lg:w-1/2 lg:justify-between lg:gap-0">
+      <p class="text-mobile-body-10 font-normal text-neutral-500 lg:text-mobile-body-16">{age}</p>
+      <p class="text-mobile-body-10 font-normal text-neutral-500 lg:text-mobile-body-16">{gender}</p>
+      <p class="text-mobile-body-10 font-normal text-neutral-500 lg:text-mobile-body-16">{size}</p>
+    </div>
+    <div class="flex w-[194px] flex-row gap-[8px]">
+      <Image
+        src={pinIcon}
+        alt="Ícone de alfinete"
+        class="h-[19px] w-[19px] lg:h-[24px] lg:w-[24px]"
+      />
+      <p class="text-mobile-body-10 font-normal text-neutral-500 lg:text-mobile-body-16">{location}</p>
+    </div>
+    <button
+      class="mb-0 h-11 w-full cursor-pointer border-none bg-secondary-dark text-mobile-body-14 font-semibold text-white transition-colors duration-[400ms] ease-in-out hover:bg-secondary-dark-hover lg:h-10"
+    >
+      Quero adotar
+    </button>
+  </div>
+</li>

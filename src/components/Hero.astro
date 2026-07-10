@@ -1,0 +1,58 @@
+---
+import { Image } from "astro:assets";
+import dogMain from "../assets/img/pictureDogMain.svg";
+import heartPawn from "../assets/img/iconHeartPawn.svg";
+---
+
+<section
+    class="flex w-full flex-col items-center justify-center lg:h-[631px] lg:flex-row lg:overflow-hidden lg:bg-linear-to-l lg:from-primary-brand-light-10 lg:to-white lg:pl-[216px] lg:pr-[82px] big-desktop:gap-[100px]"
+>
+    <div
+        class="relative mb-[15px] flex h-[195px] w-full items-center justify-center bg-linear-to-l from-primary-brand to-white lg:order-1 lg:h-full lg:w-[569px] lg:bg-none"
+    >
+        <div
+            class="relative top-[10px] z-[999] h-[163px] w-[163px] rounded-full bg-primary-brand lg:top-[120px] lg:h-[556px] lg:w-[556px]"
+        >
+        </div>
+        <Image
+            src={dogMain}
+            alt="Foto de um cachorro feliz"
+            class="absolute z-[1000] h-[194px] w-[186px] lg:top-[90px] lg:h-[569px] lg:w-[455px]"
+        />
+    </div>
+
+    <div
+        class="flex w-full flex-col items-start px-6 lg:order-0 lg:mr-6 lg:max-w-[602px]"
+    >
+        <Image
+            src={heartPawn}
+            alt="Ícone coração e pata de pet"
+            class="mt-[5px] h-[18px] w-[18px] lg:h-6 lg:w-6"
+        />
+        <h1
+            class="mt-2 w-full text-mobile-h1 lg:max-w-[604px] lg:text-desktop-h2"
+        >
+            O amigo que você procura está aqui!
+        </h1>
+        <p
+            class="mt-4 w-[87%] text-mobile-body-16 font-light lg:max-w-[419px] lg:text-desktop-body-24"
+        >
+            Por trás de cada olhar curioso, existe um pet incrível esperando por
+            um lar cheio de amor.
+        </p>
+        <div
+            class="mt-4 flex w-full flex-col items-start justify-between lg:flex-row lg:max-w-[540px] lg:gap-[30px]"
+        >
+            <button
+                class="btn-primary mt-6 inline-block h-[54px] w-full text-mobile-body-16 transition-colors duration-[400ms] ease-in hover:bg-primary-brand-hover lg:mt-0 lg:h-[60px] lg:w-[245px] lg:text-desktop-body-24"
+            >
+                Quero adotar
+            </button>
+            <button
+                class="btn-outline mt-4 inline-block h-[54px] w-full text-mobile-body-16 transition-colors duration-[400ms] ease-in hover:bg-primary-brand-hover hover:text-white lg:mt-0 lg:h-[60px] lg:w-[245px] lg:text-desktop-body-24"
+            >
+                Fazer doação
+            </button>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,64 @@
+---
+import Accordion from "./Accordion.astro";
+
+const questions = [
+  {
+    title: "Quem pode realizar a adoção?",
+    paragraph:
+      "Qualquer pessoa maior de 18 anos, com documento de identificação válido e condições de oferecer um lar seguro e amoroso para o animal. É importante ter consciência de que adotar é um compromisso de longo prazo.",
+  },
+  {
+    title: "O que é preciso para adotar um pet?",
+    paragraph:
+      "Basta se cadastrar na plataforma, escolher o pet ideal para o seu perfil e preencher o formulário de adoção. Nossa equipe entra em contato para alinhar os próximos passos e garantir que o match seja perfeito.",
+  },
+  {
+    title: "Quais são os documentos necessários para uma adoção?",
+    paragraph:
+      "São necessários RG, CPF e comprovante de residência atualizado. Em alguns casos, também pode ser solicitado um comprovante de renda para confirmar que você tem condições de cuidar do novo integrante da família.",
+  },
+  {
+    title: "Após o preenchimento do formulário, quanto tempo devo aguardar?",
+    paragraph:
+      "O prazo médio de análise é de até 5 dias úteis. Nossa equipe avalia as informações com cuidado para garantir a segurança do pet e, assim que aprovado, entramos em contato para combinar a retirada ou entrega.",
+  },
+  {
+    title: "Adotei um pet e ele não se adaptou, é possível a devolução?",
+    paragraph:
+      "Sim, entendemos que a adaptação pode não acontecer. Basta entrar em contato com nossa equipe de suporte, que irá orientar sobre o processo de devolução e ajudar a encontrar um novo lar responsável para o pet.",
+  },
+];
+---
+
+<section
+  class="flex w-full flex-col lg:mt-[5%] lg:w-[75%] lg:justify-self-center"
+>
+  <p class="self-center text-mobile-body-10 font-semibold text-primary-brand">
+    FAQ
+  </p>
+  <h1
+    class="mb-[30px] self-center text-mobile-h2 font-bold text-neutral-900 lg:mb-[3%] lg:text-desktop-h3"
+  >
+    Dúvidas frequentes
+  </h1>
+
+  {
+    questions.map(({ title, paragraph }) => (
+      <Accordion title={title} paragraph={paragraph} />
+    ))
+  }
+
+  <div class="mt-5 px-6 py-4 lg:hidden">
+    <h5 class="text-mobile-h4 font-bold text-neutral-900">
+      Ainda ficou alguma dúvida?
+    </h5>
+    <p
+      class="mt-[10px] w-full text-left text-mobile-body-12 font-normal text-neutral-500"
+    >
+      Fique à vontade para nos contatar através do nosso email, estamos aqui
+      para ajudar você (e seu futuro pet)! <span class="font-semibold underline"
+        >contato@matchpet.com</span
+      >
+    </p>
+  </div>
+</section>

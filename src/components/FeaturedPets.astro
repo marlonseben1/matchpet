@@ -1,0 +1,89 @@
+---
+import PetCard from "./PetCard.astro";
+import CardSlider from "./CardSlider.astro";
+import dogFrederico from "../assets/img/pictureDogFrederico.svg";
+import catAurora from "../assets/img/pictureCatAurora.svg";
+import catFarofa from "../assets/img/pictureCatFarofa.svg";
+import dogTheo from "../assets/img/pictureDogTheo.svg";
+import dogIcon from "../assets/img/iconDogIcon.svg";
+import catIcon from "../assets/img/iconCatIcon.svg";
+---
+
+<section class="mt-[84px] flex flex-col items-center justify-center">
+  <p data-slogan class="text-mobile-body-12 font-normal text-primary-brand lg:text-desktop-body-16 lg:font-semibold">
+    Se apaixone!
+  </p>
+  <h2 class="w-[320px] text-center text-mobile-h3 font-black lg:w-auto lg:text-desktop-h3">
+    Conheça alguns de nossos peludos
+  </h2>
+  <p class="mt-3 w-[320px] text-mobile-body-12 font-normal text-neutral-500 lg:w-auto lg:text-desktop-body-24">
+    No olhar de um novo amigo, mora um mundo de carinho pronto para ser seu.
+  </p>
+
+  <CardSlider>
+    <PetCard
+      image={dogFrederico}
+      imageAlt="Cachorro chamado Frederico"
+      name="Frederico"
+      speciesIcon={dogIcon}
+      speciesIconAlt="Ícone cachorro fofo"
+      age="1 ano"
+      gender="Macho"
+      size="M"
+      location="Marau-RS"
+    />
+    <PetCard
+      image={catAurora}
+      imageAlt="Cachorro chamado Frederico"
+      name="Aurora"
+      speciesIcon={catIcon}
+      speciesIconAlt="Ícone gato fofo"
+      age="1 ano"
+      gender="Fêmea"
+      size="P"
+      location="Marau, RS"
+    />
+    <PetCard
+      image={catFarofa}
+      imageAlt="Cachorro chamado Frederico"
+      name="Farofa"
+      speciesIcon={catIcon}
+      speciesIconAlt="Ícone gato fofo"
+      age="3 anos"
+      gender="Macho"
+      size="P"
+      location="Marau, RS"
+      hideOnMidDesktop
+    />
+    <PetCard
+      image={dogTheo}
+      imageAlt="Cachorro chamado Théo"
+      name="Théo"
+      speciesIcon={dogIcon}
+      speciesIconAlt="Ícone cachorro fofo"
+      age="6 anos"
+      gender="Macho"
+      size="P"
+      location="Passo Fundo–RS"
+    />
+  </CardSlider>
+
+  <div class="mt-[25px] flex w-full items-center justify-center">
+    <h3 class="mt-9 text-center text-mobile-body-12 font-bold text-secondary-dark underline lg:text-desktop-body-20">
+      <a href="#" class="underline">Não posso adotar agora, mas quero ajudar!</a>
+    </h3>
+  </div>
+</section>
+
+<script>
+  const slogan = document.querySelector<HTMLElement>("[data-slogan]");
+  const desktopQuery = window.matchMedia("(min-width: 1024px)");
+
+  function updateSlogan(e: MediaQueryList | MediaQueryListEvent) {
+    if (!slogan) return;
+    slogan.textContent = e.matches ? "Venha se apaixonar!" : "Se apaixone!";
+  }
+
+  desktopQuery.addEventListener("change", updateSlogan);
+  updateSlogan(desktopQuery);
+</script>

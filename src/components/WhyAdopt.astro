@@ -1,0 +1,42 @@
+---
+import AdoptionCard from "./AdoptionCard.astro";
+import heartPet from "../assets/img/iconHeartPet.svg";
+import dogHouse from "../assets/img/iconDogHouse.svg";
+import health from "../assets/img/iconHealth.svg";
+
+const cards = [
+  {
+    icon: heartPet,
+    iconAlt: "Coração e pata de pet",
+    title: "Cada adoção é única",
+    paragraph:
+      "Adotar significa dar início a uma nova jornada, cheia de histórias, aprendizado e companheirismo que só um pet resgatado pode oferecer.",
+  },
+  {
+    icon: dogHouse,
+    iconAlt: "Casa de cachorro",
+    title: "Incentiva a adoção consciente",
+    paragraph:
+      "Ao escolher adotar, você promove a responsabilidade e evita o consumo desenfreado de animais, ajudando a controlar a superpopulação.",
+  },
+  {
+    icon: health,
+    iconAlt: "Cruz de hospital e pata de pet",
+    title: "Benefícios para a saúde",
+    paragraph:
+      "Ter um pet adotado pode reduzir o estresse, melhorar o humor e aumentar a sensação de bem-estar, trazendo alegria para sua vida.",
+  },
+];
+---
+
+<section class="mt-[42px] flex flex-col items-center justify-center lg:mt-[125px]">
+  <h1 class="text-mobile-h3 font-bold text-neutral-900 lg:w-full lg:text-center lg:text-desktop-h3">
+    Por que adotar?
+  </h1>
+  <h5 class="mt-3 w-[78%] text-center text-mobile-h5 font-normal text-neutral-500 lg:w-full lg:text-desktop-body-24">
+    Entenda os benefícios de uma adoção conosco
+  </h5>
+  <div class="mt-[31px] flex w-full flex-col items-center justify-center lg:flex-row lg:gap-[50px] lg:mb-20">
+    {cards.map((card) => <AdoptionCard {...card} />)}
+  </div>
+</section>

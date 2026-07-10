@@ -1,0 +1,149 @@
+---
+import { Image } from "astro:assets";
+import logo from "../assets/img/iconLogo.svg";
+---
+
+<header
+    class="fixed inset-x-0 top-0 z-[1001] flex h-[63px] w-full items-center justify-between bg-white px-6 py-4 lg:h-[112px] lg:justify-between lg:overflow-hidden lg:px-10"
+>
+    <div class="lg:w-1/4 lg:pl-4">
+        <Image src={logo} alt="Matchpet logo" class="h-[74px] w-[167px]" />
+    </div>
+
+    <label
+        for="checkbox"
+        class="menu flex h-[60px] w-[40px] cursor-pointer flex-col justify-center rounded-[10px] bg-white p-[10px] lg:hidden"
+    >
+        <input type="checkbox" id="checkbox" class="peer hidden" />
+        <div
+            class="line line-1 h-[3px] w-full origin-center bg-primary-brand transition-all duration-[400ms] ease-in-out peer-checked:[translate:0_8px] peer-checked:[rotate:225deg]"
+        >
+        </div>
+        <div
+            class="line line-2 my-[5px] h-[3px] w-full bg-primary-brand transition-all duration-[400ms] ease-in-out peer-checked:opacity-0"
+        >
+        </div>
+        <div
+            class="line line-3 h-[3px] w-full origin-center bg-primary-brand transition-all duration-[400ms] ease-in-out peer-checked:[translate:0_-8px] peer-checked:[rotate:-225deg]"
+        >
+        </div>
+    </label>
+
+    <nav
+        class="navigation absolute left-0 top-full z-[1001] flex h-[calc(100vh-100%)] w-full flex-col overflow-y-auto bg-white text-mobile-body-16 font-light text-secondary-dark opacity-0 pointer-events-none transition-[opacity,transform] duration-300 ease-in-out lg:static lg:z-auto lg:h-auto lg:w-3/4 lg:flex-1 lg:flex-row lg:items-center lg:justify-end lg:pointer-events-auto lg:text-desktop-body-20 lg:font-normal lg:opacity-100"
+    >
+        <ul
+            class="navigation__list m-0 flex h-auto w-full flex-col p-0 lg:absolute lg:left-1/2 lg:top-1/2 lg:w-[52.5%] lg:-translate-x-1/2 lg:-translate-y-1/2 lg:flex-row lg:items-center lg:justify-evenly"
+        >
+            <li
+                class="border-t border-black/10 px-[7%] py-[44px] lg:w-auto lg:border-0 lg:px-[10px] lg:py-[20px]"
+            >
+                <a
+                    href="#"
+                    class="relative inline-block text-inherit no-underline after:absolute after:inset-0 after:-z-10 after:scale-0 after:rounded-full after:bg-neutral-100 after:opacity-0 after:transition-all after:duration-300 lg:hover:scale-110 lg:hover:transition-transform lg:hover:duration-[250ms] lg:hover:after:scale-125 lg:hover:after:opacity-100"
+                    >Nossos pets</a
+                >
+            </li>
+            <li
+                class="border-t border-black/10 px-[7%] py-[44px] lg:w-auto lg:border-0 lg:px-[10px] lg:py-[20px]"
+            >
+                <a
+                    href="#"
+                    class="relative inline-block text-inherit no-underline after:absolute after:inset-0 after:-z-10 after:scale-0 after:rounded-full after:bg-neutral-100 after:opacity-0 after:transition-all after:duration-300 lg:hover:scale-110 lg:hover:transition-transform lg:hover:duration-[250ms] lg:hover:after:scale-125 lg:hover:after:opacity-100"
+                    >Quem somos</a
+                >
+            </li>
+            <li
+                class="border-t border-black/10 px-[7%] py-[44px] lg:w-auto lg:border-0 lg:px-[10px] lg:py-[20px]"
+            >
+                <a
+                    href="#"
+                    class="relative inline-block text-inherit no-underline after:absolute after:inset-0 after:-z-10 after:scale-0 after:rounded-full after:bg-neutral-100 after:opacity-0 after:transition-all after:duration-300 lg:hover:scale-110 lg:hover:transition-transform lg:hover:duration-[250ms] lg:hover:after:scale-125 lg:hover:after:opacity-100"
+                    >Contato</a
+                >
+            </li>
+            <li
+                class="border-t border-black/10 px-[7%] py-[44px] lg:w-auto lg:border-0 lg:px-[10px] lg:py-[20px]"
+            >
+                <a
+                    href="#"
+                    class="relative inline-block text-inherit no-underline after:absolute after:inset-0 after:-z-10 after:scale-0 after:rounded-full after:bg-neutral-100 after:opacity-0 after:transition-all after:duration-300 lg:hover:scale-110 lg:hover:transition-transform lg:hover:duration-[250ms] lg:hover:after:scale-125 lg:hover:after:opacity-100"
+                    >Suporte</a
+                >
+            </li>
+        </ul>
+        <div class="header__right flex items-center justify-center">
+            <a
+                href="/login"
+                class="navigation__btn mx-auto my-[20px] inline-block w-[90%] rounded-[5px] border-[1.5px] border-primary-brand bg-white px-[28px] py-[15px] text-center text-mobile-body-18 text-primary-brand no-underline transition-colors duration-[400ms] ease-in hover:bg-primary-brand-hover hover:text-white lg:mr-4 lg:w-auto lg:min-w-[150px] lg:px-[36px] lg:py-[10px]"
+                >Entrar</a
+            >
+        </div>
+    </nav>
+</header>
+
+<script>
+    const checkbox = document.getElementById(
+        "checkbox",
+    ) as HTMLInputElement | null;
+    const navigation = document.querySelector<HTMLElement>(".navigation");
+    const body = document.body;
+    let scrollY = 0;
+
+    checkbox?.addEventListener("change", () => {
+        if (!navigation) return;
+
+        if (checkbox.checked) {
+            // Open nav
+            navigation.classList.remove("animate-move-out-right-to-left");
+            navigation.classList.add(
+                "animate-move-in-left-to-right",
+                "pointer-events-auto",
+            );
+
+            // Lock scroll
+            scrollY = window.scrollY;
+            body.style.position = "fixed";
+            body.style.top = `-${scrollY}px`;
+            body.classList.add("no-scroll");
+        } else {
+            // Close nav
+            navigation.classList.remove("animate-move-in-left-to-right");
+            navigation.classList.add("animate-move-out-right-to-left");
+
+            // Unlock scroll after animation finishes
+            setTimeout(() => {
+                navigation.classList.remove(
+                    "animate-move-out-right-to-left",
+                    "pointer-events-auto",
+                );
+
+                // Restore scroll
+                body.classList.remove("no-scroll");
+                body.style.position = "";
+                body.style.top = "";
+                window.scrollTo(0, scrollY);
+            }, 450);
+        }
+    });
+
+    // Reset the mobile nav state once the viewport crosses into desktop
+    const desktopQuery = window.matchMedia("(min-width: 1024px)");
+
+    function resetOnDesktop(e: MediaQueryList | MediaQueryListEvent) {
+        if (!e.matches || !navigation) return;
+
+        navigation.classList.remove(
+            "animate-move-in-left-to-right",
+            "animate-move-out-right-to-left",
+            "pointer-events-auto",
+        );
+        body.classList.remove("no-scroll");
+        body.style.position = "";
+        body.style.top = "";
+        if (checkbox) checkbox.checked = false;
+    }
+
+    desktopQuery.addEventListener("change", resetOnDesktop);
+    resetOnDesktop(desktopQuery);
+</script>

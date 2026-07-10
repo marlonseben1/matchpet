@@ -1,0 +1,47 @@
+---
+import { Image } from "astro:assets";
+import downArrow from "../assets/img/iconDownArrow.svg";
+
+interface Props {
+  title: string;
+  paragraph: string;
+}
+
+const { title, paragraph } = Astro.props;
+---
+
+<div class="accordion border-b-[0.7px] border-neutral-300 px-6">
+  <button
+    class="accordion-header mb-4 mt-4 flex w-full items-center justify-between border-0 bg-transparent"
+  >
+    <span class="w-[70%] text-left font-sans text-mobile-h4 font-bold text-neutral-700 lg:text-desktop-h5 lg:font-semibold"
+      >{title}</span
+    >
+    <Image
+      src={downArrow}
+      alt="Seta para baixo que exibe resposta da pergunta"
+      loading="lazy"
+      class="accordion-icon h-[18px] w-[18px] cursor-pointer transition-transform duration-200 ease-linear"
+    />
+  </button>
+  <div class="accordion-body mb-6 hidden h-[105px] w-[327px] overflow-hidden lg:w-[78%]">
+    <p class="w-full text-mobile-body-10 font-normal text-neutral-500 lg:text-desktop-body-18">
+      {paragraph}
+    </p>
+  </div>
+</div>
+
+<script>
+  const accordions = document.querySelectorAll<HTMLElement>(".accordion");
+
+  accordions.forEach((accordion) => {
+    const header = accordion.querySelector<HTMLElement>(".accordion-header");
+    const body = accordion.querySelector<HTMLElement>(".accordion-body");
+    const icon = accordion.querySelector<HTMLElement>(".accordion-icon");
+
+    header?.addEventListener("click", () => {
+      body?.classList.toggle("hidden");
+      icon?.classList.toggle("rotate-180");
+    });
+  });
+</script>

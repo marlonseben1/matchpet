@@ -1,0 +1,41 @@
+---
+import CardSlider from "./CardSlider.astro";
+import TestimonialCard from "./TestimonialCard.astro";
+
+const testimonials = [
+  {
+    name: "Pedro Eduardo",
+    location: "Marau, RS",
+    paragraph:
+      "Fui buscar companhia e encontrei uma amizade verdadeira graças ao processo de adoção. Agora não largo mais o Fred!",
+  },
+  {
+    name: "Maria Soares",
+    location: "Florianópolis-SC",
+    paragraph:
+      "O processo é feito com muito amor e carinho Recomendo para qualquer pessoa que esteja pronta para amar um pet de verdade",
+  },
+  {
+    name: "Joaquim Costa",
+    location: "Casca–RS",
+    paragraph:
+      "Nunca imaginei que um coelhinho fosse trazer tanta alegria! Adoção responsável, equipe atenciosa e um novo amor na minha vida",
+  },
+];
+---
+
+<section class="mt-[50px] flex w-full flex-col items-center justify-center gap-[10px] text-center lg:mt-[7%]">
+  <div>
+    <p class="text-mobile-body-10 font-semibold text-primary-brand lg:hidden">
+      Feedback de quem já adotou
+    </p>
+    <h1 class="text-mobile-h3 font-bold text-neutral-900 lg:text-desktop-h3">O que estão falando</h1>
+    <h3 class="w-[300px] text-mobile-body-12 font-semibold text-neutral-500 lg:w-full lg:text-desktop-body-24">
+      Pessoas que encontraram seu match perfeito
+    </h3>
+  </div>
+
+  <CardSlider>
+    {testimonials.map((testimonial) => <TestimonialCard {...testimonial} />)}
+  </CardSlider>
+</section>
