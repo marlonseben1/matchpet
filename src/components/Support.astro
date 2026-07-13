@@ -1,0 +1,74 @@
+---
+import { Image } from "astro:assets";
+import thumbnailDogs from "../assets/img/thumbnailDogs.webp";
+
+const benefits = [
+  "Apoio direto às ONGs parceiras",
+  "Produção de materiais para divulgação dos pets",
+  "Manutenção da plataforma e atendimento aos adotantes",
+  "Projetos de educação sobre adoção responsável",
+];
+---
+
+<section
+    class="mt-16 flex w-full flex-col items-center px-8 lg:mt-24 lg:w-[90%] lg:max-w-[1150px] lg:px-0 lg:mx-auto"
+>
+    <div
+        class="flex w-full flex-col items-center text-center lg:items-stretch lg:text-left"
+    >
+        <h2
+            class="text-mobile-h2 font-bold text-neutral-900 lg:text-desktop-h2"
+        >
+            Apoie essa causa
+        </h2>
+        <p
+            class="mt-3 text-mobile-body-16 font-normal text-neutral-500 lg:text-desktop-body-24"
+        >
+            Acredita no nosso propósito? Então ajude a transformar ainda mais
+            histórias.
+        </p>
+        <p
+            class="mt-6 text-mobile-body-16 font-normal text-neutral-500 lg:text-desktop-body-24"
+        >
+            O Match Pet é uma ponte entre vidas que precisam de cuidado e
+            pessoas dispostas a amar. Mas para continuar conectando lares e
+            patinhas, precisamos de você.
+        </p>
+    </div>
+
+    <div
+        class="mt-6 flex w-full flex-col gap-6 lg:mt-10 lg:self-start lg:flex-row lg:items-start lg:gap-10"
+    >
+        <Image
+            src={thumbnailDogs}
+            alt="Vídeo com momentos de carinho entre tutores e pets resgatados"
+            class="w-full rounded-lg lg:w-[44%] lg:shrink-0"
+        />
+
+        <div class="flex w-full flex-col lg:w-[56%]">
+            <h3
+                class="text-mobile-h4 font-bold text-neutral-900 lg:text-desktop-h4"
+            >
+                Ao doar, você contribui com:
+            </h3>
+            <ul
+                class="mt-3 flex list-none flex-col gap-2 text-mobile-body-16 font-normal text-neutral-500 lg:text-desktop-body-24"
+            >
+                {benefits.map((benefit) => <li>{benefit}</li>)}
+            </ul>
+            <p
+                class="mt-4 text-mobile-body-16 font-normal text-neutral-500 lg:text-desktop-body-24"
+            >
+                Cada contribuição, por menor que seja, faz uma enorme diferença
+                na vida de animais resgatados e nas chances de eles encontrarem
+                um lar de verdade.
+            </p>
+        </div>
+    </div>
+
+    <button
+        class="btn-primary mt-8 h-[54px] w-full text-mobile-body-16 transition-colors duration-[400ms] ease-in hover:bg-primary-brand-hover lg:mt-10 lg:h-[60px] lg:w-[320px] lg:self-center lg:text-desktop-body-24"
+    >
+        Quero doar agora
+    </button>
+</section>
