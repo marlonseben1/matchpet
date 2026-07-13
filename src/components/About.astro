@@ -1,0 +1,60 @@
+---
+import { Image } from "astro:assets";
+import familyDogPawn from "../assets/img/familyDogPawn.webp";
+import dogHouseIcon from "../assets/img/iconDogHouse.svg";
+---
+
+<section class="flex w-full flex-col items-center">
+  <Image
+    src={familyDogPawn}
+    alt="Mãos de pessoas diferentes seguram a pata de um cachorro em sinal de acolhimento"
+    class="h-[230px] w-full object-cover lg:h-[349px]"
+  />
+
+  <div
+    class="mt-6 flex w-full flex-col px-8 lg:mt-10 lg:w-[90%] lg:max-w-[1150px] lg:mx-auto lg:px-0"
+  >
+    <Image src={dogHouseIcon} alt="Ícone de casa" class="h-8 w-8" />
+    <h1
+      class="mt-3 text-mobile-h2 font-bold text-neutral-900 lg:text-desktop-h2"
+    >
+      Quem somos
+    </h1>
+    <p
+      class="mt-6 text-mobile-body-16 font-normal text-neutral-500 lg:text-desktop-body-24"
+    >
+      No Match Pet, acreditamos que todo animal merece um lar cheio de amor —
+      e toda pessoa merece a chance de encontrar um companheiro fiel.
+    </p>
+    <p
+      class="mt-6 text-mobile-body-16 font-normal text-neutral-500 lg:text-desktop-body-24"
+    >
+      Somos uma organização sem fins lucrativos que conecta ONGs de resgate
+      animal a pessoas dispostas a transformar vidas por meio da adoção
+      responsável. Atuamos como um elo entre histórias que precisam de um
+      novo começo e corações prontos para acolher.
+    </p>
+    <p
+      class="mt-6 text-mobile-body-16 font-normal text-neutral-500 lg:text-desktop-body-24"
+    >
+      Nosso papel é facilitar esse encontro — o match perfeito — reunindo em
+      uma única plataforma pets resgatados por diversas instituições sérias e
+      comprometidas com o bem-estar animal. Aqui, cada perfil é pensado com
+      carinho, para que você conheça a história, personalidade e necessidades
+      de cada pet, aumentando as chances de uma adoção consciente e
+      duradoura.
+    </p>
+    <p
+      class="mt-6 text-mobile-body-16 font-normal text-neutral-500 lg:text-desktop-body-24"
+    >
+      Mais do que um site, somos um movimento. Um convite para olhar com mais
+      empatia, abrir as portas da sua casa e, quem sabe, do seu coração
+      também.
+    </p>
+    <p
+      class="mt-8 text-center text-mobile-h5 font-bold text-secondary-dark lg:text-desktop-h4"
+    >
+      Porque quando dá match, a vida muda — pra ambos os lados.
+    </p>
+  </div>
+</section>

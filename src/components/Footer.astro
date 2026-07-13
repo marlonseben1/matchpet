@@ -30,117 +30,121 @@ const linkSections = [
 ];
 ---
 
-<footer class="mt-[60px] w-screen bg-neutral-900 px-6 py-10 lg:mt-[120px] lg:px-16 lg:py-14">
-  <div class="lg:mx-auto lg:max-w-[1200px]">
-    <div class="lg:flex lg:items-start lg:gap-20">
-      <div class="lg:w-auto lg:shrink-0">
-        <Image
-          src={logoAlternative}
-          alt="Logo do MatchPet"
-          class="mb-6"
-          loading="lazy"
-        />
-        <p
-          class="mb-6 text-mobile-body-10 text-neutral-300 lg:text-desktop-body-16"
-        >
-          Mude uma vida, adote!
-        </p>
-        <p
-          class="mb-4 text-mobile-body-10 font-semibold text-neutral-200 lg:mb-0 lg:text-desktop-body-16"
-        >
-          contato@matchpet.com
-        </p>
+<footer
+    class="mt-[60px] w-screen bg-neutral-900 px-6 py-10 lg:mt-[120px] lg:px-16 lg:py-14"
+>
+    <div class="lg:mx-auto lg:max-w-[1200px]">
+        <div class="lg:flex lg:items-start lg:gap-20">
+            <div class="lg:w-auto lg:shrink-0">
+                <Image
+                    src={logoAlternative}
+                    alt="Logo do MatchPet"
+                    class="mb-6"
+                    loading="lazy"
+                />
+                <p
+                    class="mb-6 text-mobile-body-10 text-neutral-300 lg:text-desktop-body-16"
+                >
+                    Mude uma vida, adote!
+                </p>
+                <p
+                    class="mb-4 text-mobile-body-10 font-semibold text-neutral-200 lg:mb-0 lg:text-desktop-body-16"
+                >
+                    contato@matchpet.com
+                </p>
 
-        <div class="flex flex-row gap-4 lg:hidden">
-          <Image
-            src={whatsappIcon}
-            alt="Icone do Whatsapp"
-            class={socialIconClass}
-            loading="lazy"
-          />
-          <Image
-            src={instagramIcon}
-            alt="Icone do Instagram"
-            class={socialIconClass}
-            loading="lazy"
-          />
-          <Image
-            src={youtubeIcon}
-            alt="Icone do Youtube"
-            class={socialIconClass}
-            loading="lazy"
-          />
-          <Image
-            src={facebookIcon}
-            alt="Icone do Facebook"
-            class={socialIconClass}
-            loading="lazy"
-          />
-        </div>
-      </div>
-
-      <div
-        class="mt-10 flex w-full flex-row flex-wrap lg:mt-0 lg:w-auto lg:flex-nowrap lg:items-start lg:gap-16"
-      >
-        {
-          linkSections.map((section) => (
-            <div class={`w-1/2 lg:w-auto ${section.className ?? ""}`}>
-              <h5 class="mb-4 text-mobile-h5 font-bold text-white lg:text-desktop-h5">
-                {section.title}
-              </h5>
-              <ul class="flex cursor-pointer list-none flex-col gap-4">
-                {section.links.map((link) => (
-                  <li>
-                    <a
-                      href="#"
-                      class="text-mobile-body-12 text-neutral-300 lg:text-desktop-body-16"
-                    >
-                      {link}
-                    </a>
-                  </li>
-                ))}
-              </ul>
+                <div class="flex flex-row gap-4 lg:hidden">
+                    <Image
+                        src={whatsappIcon}
+                        alt="Icone do Whatsapp"
+                        class={socialIconClass}
+                        loading="lazy"
+                    />
+                    <Image
+                        src={instagramIcon}
+                        alt="Icone do Instagram"
+                        class={socialIconClass}
+                        loading="lazy"
+                    />
+                    <Image
+                        src={youtubeIcon}
+                        alt="Icone do Youtube"
+                        class={socialIconClass}
+                        loading="lazy"
+                    />
+                    <Image
+                        src={facebookIcon}
+                        alt="Icone do Facebook"
+                        class={socialIconClass}
+                        loading="lazy"
+                    />
+                </div>
             </div>
-          ))
-        }
-      </div>
-    </div>
 
-    <div
-      class="mt-[46px] flex flex-col items-center gap-6 lg:mt-14 lg:flex-row lg:items-center lg:justify-between lg:gap-0"
-    >
-      <p
-        class="text-center text-mobile-body-10 text-neutral-200 lg:text-left lg:text-desktop-body-16"
-      >
-        ©Copyright Matchpet 2025. Todos os direitos reservados
-      </p>
+            <div
+                class="mt-10 flex w-full flex-row flex-wrap lg:mt-0 lg:w-auto lg:flex-nowrap lg:items-start lg:gap-16"
+            >
+                {
+                    linkSections.map((section) => (
+                        <div
+                            class={`w-1/2 lg:w-auto ${section.className ?? ""}`}
+                        >
+                            <h5 class="mb-4 text-mobile-h5 font-bold text-white lg:text-desktop-h5">
+                                {section.title}
+                            </h5>
+                            <ul class="flex cursor-pointer list-none flex-col gap-4">
+                                {section.links.map((link) => (
+                                    <li>
+                                        <a
+                                            href="#"
+                                            class="text-mobile-body-12 text-neutral-300 lg:text-desktop-body-16"
+                                        >
+                                            {link}
+                                        </a>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    ))
+                }
+            </div>
+        </div>
 
-      <div class="hidden flex-row gap-4 lg:flex">
-        <Image
-          src={whatsappIcon}
-          alt="Icone do Whatsapp"
-          class={socialIconClass}
-          loading="lazy"
-        />
-        <Image
-          src={instagramIcon}
-          alt="Icone do Instagram"
-          class={socialIconClass}
-          loading="lazy"
-        />
-        <Image
-          src={youtubeIcon}
-          alt="Icone do Youtube"
-          class={socialIconClass}
-          loading="lazy"
-        />
-        <Image
-          src={facebookIcon}
-          alt="Icone do Facebook"
-          class={socialIconClass}
-          loading="lazy"
-        />
-      </div>
+        <div
+            class="mt-[46px] flex flex-col items-center gap-6 lg:mt-14 lg:flex-row lg:items-center lg:justify-between lg:gap-0"
+        >
+            <p
+                class="text-center text-mobile-body-10 text-neutral-200 lg:text-left lg:text-desktop-body-16"
+            >
+                ©Copyright Matchpet 2026. Todos os direitos reservados
+            </p>
+
+            <div class="hidden flex-row gap-4 lg:flex">
+                <Image
+                    src={whatsappIcon}
+                    alt="Icone do Whatsapp"
+                    class={socialIconClass}
+                    loading="lazy"
+                />
+                <Image
+                    src={instagramIcon}
+                    alt="Icone do Instagram"
+                    class={socialIconClass}
+                    loading="lazy"
+                />
+                <Image
+                    src={youtubeIcon}
+                    alt="Icone do Youtube"
+                    class={socialIconClass}
+                    loading="lazy"
+                />
+                <Image
+                    src={facebookIcon}
+                    alt="Icone do Facebook"
+                    class={socialIconClass}
+                    loading="lazy"
+                />
+            </div>
+        </div>
     </div>
-  </div>
 </footer>
